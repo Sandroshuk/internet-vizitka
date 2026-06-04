@@ -1,0 +1,16 @@
+{
+  "name": "Светлана Андрощук | Интернет-визитки",
+  "short_name": "Интернет-визитка",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f5f5f0",
+  "theme_color": "#f5f5f0",
+  "icons": [
+    {
+      "src": "assets/svetlana-hero-gold.jpg",
+      "sizes": "1499x997",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
