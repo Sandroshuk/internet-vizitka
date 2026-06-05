@@ -354,20 +354,6 @@ main,
   isolation: isolate;
 }
 
-.visual-card::before {
-  content: "";
-  position: absolute;
-  inset: 11% 6% 7% 8%;
-  border: 1px solid var(--line);
-  border-radius: 46% 54% 38% 62% / 58% 44% 56% 42%;
-  background:
-    radial-gradient(circle at 42% 28%, rgba(255, 255, 255, 0.55), transparent 30%),
-    linear-gradient(140deg, var(--surface), var(--accent-soft));
-  box-shadow: var(--glow);
-  transform: rotate(-5deg);
-  z-index: -1;
-}
-
 .visual-toggle {
   position: absolute;
   top: 8%;
@@ -1260,11 +1246,6 @@ main {
     min-height: 280px;
     margin-left: 0;
     z-index: 3;
-  }
-
-  .visual-card::before {
-    inset: 11% 0 8% 0;
-    opacity: 0.98;
   }
 
   .visual-toggle {
