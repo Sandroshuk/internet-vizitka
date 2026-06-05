@@ -325,14 +325,24 @@ const state = {
   visual: "photo",
 };
 
-if (!window.location.hash) {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function resetScrollToTop() {
+  if (window.location.hash) return;
 
   window.scrollTo(0, 0);
-  window.addEventListener("load", () => window.scrollTo(0, 0), { once: true });
 }
+
+resetScrollToTop();
+window.addEventListener("DOMContentLoaded", resetScrollToTop, { once: true });
+window.addEventListener("load", () => {
+  resetScrollToTop();
+  window.setTimeout(resetScrollToTop, 80);
+  window.setTimeout(resetScrollToTop, 300);
+}, { once: true });
+window.addEventListener("pageshow", resetScrollToTop);
 
 themeButtons.forEach((button) => {
   button.addEventListener("click", () => {
