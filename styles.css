@@ -1289,12 +1289,12 @@ main {
   }
 
   h1 {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    align-self: start;
-    margin: -8px 0 0;
-    font-size: clamp(25px, 7vw, 30px);
-    line-height: 1.06;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    margin: 0;
+    font-size: clamp(16px, 4.4vw, 20px);
+    line-height: 1.08;
     max-width: 100%;
     white-space: nowrap;
     position: relative;
