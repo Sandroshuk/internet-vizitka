@@ -10,6 +10,9 @@ const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
 const navLinks = document.querySelectorAll(".nav__links a");
 const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-ru-contact]");
+const heroLeadIntro = document.querySelector("[data-i18n='heroLeadIntro']");
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+let heroLeadTimer;
 
 const dictionaries = {
   ru: {
@@ -19,7 +22,7 @@ const dictionaries = {
     navRequest: "Заявка",
     heroKicker: "Страница по ссылке для вашего дела",
     heroTitle: "Ваша интернет\nвизитка",
-    heroLeadIntro: "Для мастера, специалиста или творческого человека:",
+    heroLeadIntro: "Для бьюти-мастера, ремесленника или творческого человека:",
     heroLeadWho: "кто вы",
     heroLeadOffer: "что предлагаете",
     heroLeadDiff: "чем отличаетесь",
@@ -125,7 +128,7 @@ const dictionaries = {
     navRequest: "Request",
     heroKicker: "A page by link for your work",
     heroTitle: "Your internet business\ncard",
-    heroLeadIntro: "For a maker, specialist or creative person:",
+    heroLeadIntro: "For a beauty pro, craftsperson or creative person:",
     heroLeadWho: "who you are",
     heroLeadOffer: "what you offer",
     heroLeadDiff: "what makes you different",
@@ -231,7 +234,7 @@ const dictionaries = {
     navRequest: "Zapytanie",
     heroKicker: "Strona pod linkiem dla Twojej pracy",
     heroTitle: "Twoja internetowa\nwizytówka",
-    heroLeadIntro: "Dla twórcy, specjalisty albo osoby kreatywnej:",
+    heroLeadIntro: "Dla beauty mastera, rzemieślnika albo osoby kreatywnej:",
     heroLeadWho: "kim jesteś",
     heroLeadOffer: "co proponujesz",
     heroLeadDiff: "czym się wyróżniasz",
@@ -442,6 +445,7 @@ function setLanguage(lang) {
 
   renderMessage();
   renderVisualToggle();
+  typeHeroLeadIntro();
 }
 
 function renderMessage() {
@@ -455,6 +459,33 @@ function renderVisualToggle() {
   const isSphere = state.visual === "sphere";
   visualToggle.setAttribute("aria-pressed", String(isSphere));
   visualToggleText.textContent = isSphere ? dictionary.visualToggleSphere : dictionary.visualTogglePhoto;
+}
+
+function typeHeroLeadIntro() {
+  if (!heroLeadIntro) return;
+
+  const text = dictionaries[state.lang].heroLeadIntro;
+  window.clearInterval(heroLeadTimer);
+  heroLeadIntro.classList.remove("is-typing");
+
+  if (reduceMotionQuery.matches) {
+    heroLeadIntro.textContent = text;
+    return;
+  }
+
+  heroLeadIntro.textContent = "";
+  heroLeadIntro.classList.add("is-typing");
+
+  let index = 0;
+  heroLeadTimer = window.setInterval(() => {
+    index += 1;
+    heroLeadIntro.textContent = text.slice(0, index);
+
+    if (index >= text.length) {
+      window.clearInterval(heroLeadTimer);
+      heroLeadIntro.classList.remove("is-typing");
+    }
+  }, 28);
 }
 
 copyButton.addEventListener("click", async () => {
