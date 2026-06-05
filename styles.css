@@ -529,8 +529,8 @@ h1 {
 h2 {
   margin-bottom: 0;
   max-width: 830px;
-  font-size: clamp(25px, 3.9vw, 46px);
-  line-height: 1.07;
+  font-size: clamp(23px, 3.25vw, 38px);
+  line-height: 1.12;
   font-weight: 780;
 }
 
@@ -665,6 +665,13 @@ main {
 
 .section-head {
   margin-bottom: 34px;
+}
+
+.section-head h2,
+.footer h2 {
+  max-width: 720px;
+  font-size: clamp(24px, 3.4vw, 40px);
+  line-height: 1.14;
 }
 
 .style-panel,
@@ -1294,9 +1301,15 @@ main {
   }
 
   h2 {
-    font-size: clamp(23px, 7.4vw, 34px);
+    font-size: clamp(22px, 6.15vw, 28px);
     line-height: 1.12;
     max-width: 100%;
+  }
+
+  .section-head h2,
+  .footer h2 {
+    font-size: clamp(23px, 6.4vw, 30px);
+    line-height: 1.16;
   }
 
   h3 {
