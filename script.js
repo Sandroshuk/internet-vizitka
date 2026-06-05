@@ -11,8 +11,13 @@ const audienceCards = document.querySelectorAll(".audience-grid article");
 const navLinks = document.querySelectorAll(".nav__links a");
 const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-ru-contact]");
 const heroLeadIntro = document.querySelector("[data-i18n='heroLeadIntro']");
+const styleTeaser = document.querySelector(".style-teaser");
+const styleTeaserSwatches = document.querySelectorAll(".style-teaser__swatch");
+const styleTeaserFonts = document.querySelectorAll(".style-teaser__font");
+const styleTeaserName = document.querySelector(".style-teaser__name");
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 let heroLeadTimer;
+let styleTeaserIndex = 0;
 
 const dictionaries = {
   ru: {
@@ -31,6 +36,7 @@ const dictionaries = {
     optionLogo: "или с лого / знаком",
     optionStyle: "примерьте цветовую гамму",
     optionFonts: "подберите настроение шрифта",
+    styleTeaserTitle: "Выбор стиля",
     priceValue: "не дороже привычного кофе-месяца",
     priceNote: "Около 25 чашек кофе за страницу, которую можно отправлять клиентам, знакомым и новым людям снова и снова.",
     heroPrimary: "Хочу такую визитку",
@@ -137,6 +143,7 @@ const dictionaries = {
     optionLogo: "or with a logo / sign",
     optionStyle: "try a color palette",
     optionFonts: "choose a font mood",
+    styleTeaserTitle: "Style choice",
     priceValue: "no more than your usual coffee month",
     priceNote: "About 25 cups of coffee for a page you can send to clients, friends and new people again and again.",
     heroPrimary: "I want this page",
@@ -243,6 +250,7 @@ const dictionaries = {
     optionLogo: "albo z logo / znakiem",
     optionStyle: "przymierz kolorystykę",
     optionFonts: "dobierz nastrój pisma",
+    styleTeaserTitle: "Wybór stylu",
     priceValue: "nie drożej niż miesiąc codziennej kawy",
     priceNote: "Około 25 kaw za stronę, którą można wysyłać klientom, znajomym i nowym osobom wiele razy.",
     heroPrimary: "Chcę taką wizytówkę",
@@ -340,6 +348,13 @@ const state = {
   person: "beauty",
   visual: "photo",
 };
+
+const styleTeaserSteps = [
+  { theme: "sand", font: 0 },
+  { theme: "mint", font: 1 },
+  { theme: "rose", font: 0 },
+  { theme: "pistachio", font: 1 },
+];
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -449,6 +464,7 @@ function setLanguage(lang) {
 
   renderMessage();
   renderVisualToggle();
+  updateStyleTeaser();
   typeHeroLeadIntro();
 }
 
@@ -463,6 +479,24 @@ function renderVisualToggle() {
   const isSphere = state.visual === "sphere";
   visualToggle.setAttribute("aria-pressed", String(isSphere));
   visualToggleText.textContent = isSphere ? dictionary.visualToggleSphere : dictionary.visualTogglePhoto;
+}
+
+function updateStyleTeaser(stepIndex = styleTeaserIndex) {
+  if (!styleTeaser || !styleTeaserName) return;
+
+  const step = styleTeaserSteps[stepIndex % styleTeaserSteps.length];
+  styleTeaser.dataset.demoTheme = step.theme;
+  styleTeaserName.textContent = dictionaries[state.lang].themeLabels[step.theme];
+
+  styleTeaserSwatches.forEach((swatch, index) => {
+    swatch.classList.toggle("is-active", index === stepIndex % styleTeaserSwatches.length);
+    swatch.classList.toggle("is-pressing", index === stepIndex % styleTeaserSwatches.length);
+  });
+
+  styleTeaserFonts.forEach((font, index) => {
+    font.classList.toggle("is-active", index === step.font);
+    font.classList.toggle("is-pressing", index === step.font);
+  });
 }
 
 function typeHeroLeadIntro() {
@@ -509,3 +543,12 @@ copyButton.addEventListener("click", async () => {
 });
 
 setLanguage("ru");
+
+updateStyleTeaser();
+
+if (!reduceMotionQuery.matches && styleTeaser) {
+  window.setInterval(() => {
+    styleTeaserIndex = (styleTeaserIndex + 1) % styleTeaserSteps.length;
+    updateStyleTeaser();
+  }, 2100);
+}
