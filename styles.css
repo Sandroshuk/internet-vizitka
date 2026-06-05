@@ -1173,7 +1173,7 @@ main {
     grid-row: 2;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: 10px;
     padding: 0;
     border: 0;
     border-radius: 0;
@@ -1189,12 +1189,12 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 8px;
-    border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
-    border-radius: 10px;
+    padding: 11px 6px;
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
+    border-radius: 12px;
     text-align: center;
-    background: color-mix(in srgb, var(--accent-soft) 54%, rgba(255, 255, 255, 0.7));
-    box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 10%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.42);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), color-mix(in srgb, var(--accent-soft) 64%, rgba(255, 255, 255, 0.5)));
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--accent) 18%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.65);
     transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease, color 180ms ease;
   }
 
