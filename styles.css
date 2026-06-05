@@ -428,14 +428,11 @@ body[data-visual="sphere"] .visual-toggle__icon::after {
 }
 
 .visual-card__photo img {
-  width: min(86%, 430px);
+  width: min(78%, 390px);
   height: auto;
   display: block;
-  object-fit: cover;
-  object-position: 34% center;
-  clip-path: ellipse(47% 48% at 43% 50%);
-  mask-image: radial-gradient(ellipse 49% 51% at 43% 50%, black 67%, transparent 100%);
-  filter: saturate(0.95) contrast(1.02) drop-shadow(0 28px 42px rgba(0, 0, 0, 0.16));
+  object-fit: contain;
+  filter: saturate(0.98) contrast(1.02) drop-shadow(0 28px 42px rgba(0, 0, 0, 0.18));
 }
 
 .visual-card__sphere {
@@ -1285,11 +1282,9 @@ main {
   }
 
   .visual-card__photo img {
-    height: 258px;
-    object-fit: cover;
-    object-position: 28% center;
-    clip-path: ellipse(48% 47% at 48% 50%);
-    mask-image: radial-gradient(ellipse 52% 50% at 48% 50%, black 73%, transparent 100%);
+    height: auto;
+    max-height: 258px;
+    object-fit: contain;
   }
 
   h1 {
