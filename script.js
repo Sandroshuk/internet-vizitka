@@ -331,7 +331,9 @@ if ("scrollRestoration" in history) {
 }
 
 function resetScrollToTop() {
-  if (window.location.hash) return;
+  if (window.location.hash) {
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
 
   window.scrollTo(0, 0);
 }
