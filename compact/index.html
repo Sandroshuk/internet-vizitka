@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f5f0">
+    <meta
+      name="description"
+      content="Интернет-визитка: красивая страница по ссылке для мастера, специалиста или творческого человека."
+    >
+    <meta property="og:title" content="Светлана Андрощук | Интернет-визитки">
+    <meta
+      property="og:description"
+      content="Одна понятная страница по ссылке: кто вы, что делаете, примеры работ, условия и кнопки связи."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/svetlana-cutout.png">
+    <title>Светлана Андрощук | Компактная интернет-визитка</title>
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="stylesheet" href="../styles.css?v=visual-builder-56">
+    <link rel="stylesheet" href="compact.css?v=compact-1">
+  </head>
+  <body data-theme="sand" data-font="soft" data-visual="photo">
+    <header class="hero" id="top">
+      <nav class="nav" aria-label="Навигация">
+        <a class="brand" href="#top" data-i18n="brand">Светлана Андрощук</a>
+        <div class="nav__links">
+          <a href="#for-whom" data-i18n="navFor">Для кого</a>
+          <a href="#inside" data-i18n="navInside">Что внутри</a>
+          <a href="#request" data-i18n="navRequest">Заявка</a>
+        </div>
+        <div class="lang-switch" aria-label="Выбор языка">
+          <button class="lang is-active" type="button" data-lang="ru">RU</button>
+          <button class="lang" type="button" data-lang="en">EN</button>
+          <button class="lang" type="button" data-lang="pl">PL</button>
+        </div>
+      </nav>
+
+      <div class="hero__grid" aria-hidden="true"></div>
+      <section class="hero__content" aria-labelledby="hero-title">
+        <div class="hero__layout">
+          <div class="visual-card" aria-label="Пример главного экрана">
+            <button class="visual-toggle" id="visualToggle" type="button" aria-pressed="false">
+              <span class="visual-toggle__icon" aria-hidden="true"></span>
+              <span id="visualToggleText">Скрыть фото</span>
+            </button>
+            <div class="visual-card__photo" aria-hidden="true">
+              <img src="../assets/svetlana-cutout.png" alt="">
+            </div>
+            <div class="visual-card__sphere" aria-hidden="true">
+              <svg viewBox="0 0 420 420">
+                <g class="atom atom--one">
+                  <ellipse cx="210" cy="210" rx="158" ry="58"></ellipse>
+                </g>
+                <g class="atom atom--two">
+                  <ellipse cx="210" cy="210" rx="158" ry="58"></ellipse>
+                </g>
+                <g class="atom atom--three">
+                  <ellipse cx="210" cy="210" rx="158" ry="58"></ellipse>
+                </g>
+                <g class="atom-center">
+                  <circle cx="210" cy="210" r="28"></circle>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="hero__copy">
+            <div class="option-marquee" aria-label="Варианты визитки">
+              <div class="option-marquee__track">
+                <span data-i18n="optionPhoto">выберите вариант: с фото</span>
+                <span data-i18n="optionLogo">или с лого / знаком</span>
+                <span data-i18n="optionStyle">примерьте цветовую гамму</span>
+                <span data-i18n="optionFonts">подберите настроение шрифта</span>
+                <span data-i18n="optionPhoto">выберите вариант: с фото</span>
+                <span data-i18n="optionLogo">или с лого / знаком</span>
+                <span data-i18n="optionStyle">примерьте цветовую гамму</span>
+                <span data-i18n="optionFonts">подберите настроение шрифта</span>
+              </div>
+            </div>
+            <h1 id="hero-title" data-i18n="heroTitle">Ваша интернет
+визитка</h1>
+            <div class="hero__lead" aria-label="Что будет в интернет-визитке">
+              <p data-i18n="heroLeadIntro">Для бьюти-мастера, ремесленника или творческого человека:</p>
+              <div class="hero__lead-tags" aria-label="Что показать">
+                <span data-i18n="heroLeadWho">кто вы</span>
+                <span data-i18n="heroLeadContact">как быстро связаться</span>
+                <span data-i18n="heroLeadOffer">что предлагаете</span>
+                <span data-i18n="heroLeadDiff">чем отличаетесь</span>
+              </div>
+            </div>
+            <a class="style-teaser" href="#style-lab" aria-label="Перейти к выбору стиля">
+              <div class="style-teaser__head">
+                <span data-i18n="styleTeaserTitle">Ниже можно выбрать стиль: цвет и шрифт</span>
+              </div>
+              <div class="style-teaser__controls" aria-hidden="true">
+                <span class="style-teaser__swatch is-active" style="--a:#f5f5f0;--b:#708090"></span>
+                <span class="style-teaser__swatch" style="--a:#fcfbe3;--b:#4caf8c"></span>
+                <span class="style-teaser__swatch" style="--a:#f0f8ff;--b:#d4a5a5"></span>
+                <span class="style-teaser__swatch" style="--a:#fff9ee;--b:#93c572"></span>
+                <span class="style-teaser__swatch" style="--a:#f3f4f7;--b:#a29bfe"></span>
+                <span class="style-teaser__font is-active">Avenir</span>
+                <span class="style-teaser__font">Georgia</span>
+              </div>
+              <strong class="style-teaser__name">Сталью по белому песку</strong>
+            </a>
+            <div class="price-strip" aria-label="Стоимость">
+              <div>
+                <strong data-i18n="priceValue">не дороже привычного кофе-месяца</strong>
+              </div>
+              <p data-i18n="priceNote">Около 25 чашек кофе за страницу, которую можно отправлять клиентам, знакомым и новым людям снова и снова.</p>
+            </div>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#request" data-i18n="heroPrimary">Хочу такую визитку</a>
+              <a class="button button--ghost" href="#style-lab" data-i18n="heroSecondary">Примерить стиль</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hero-marquee" aria-label="Кому подойдет">
+        <div class="hero-marquee__track">
+          <span data-i18n="marqueeBeauty">бьюти-мастеру</span>
+          <span data-i18n="marqueeHandmade">тем, кто делает руками</span>
+          <span data-i18n="marqueeTeacher">репетитору</span>
+          <span data-i18n="marqueeHome">мастеру по ремонту</span>
+          <span data-i18n="marqueeCreative">творческому человеку</span>
+          <span data-i18n="marqueeConsult">консультанту</span>
+          <span data-i18n="marqueeBeauty">бьюти-мастеру</span>
+          <span data-i18n="marqueeHandmade">тем, кто делает руками</span>
+          <span data-i18n="marqueeTeacher">репетитору</span>
+          <span data-i18n="marqueeHome">мастеру по ремонту</span>
+          <span data-i18n="marqueeCreative">творческому человеку</span>
+          <span data-i18n="marqueeConsult">консультанту</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="audience" id="for-whom" aria-labelledby="audience-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="audienceKicker">Кому подойдет</p>
+          <h2 id="audience-title" data-i18n="audienceTitle">Чтобы вас было легко показать, понять и рекомендовать</h2>
+        </div>
+        <div class="audience-grid">
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud1Title">Бьюти-мастер</h3><p data-i18n="aud1Text">Услуги, фото работ, цены, запись и кнопка “написать”.</p></article>
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud2Title">Ручная работа</h3><p data-i18n="aud2Text">Что вы создаете, примеры, сроки, доставка и как заказать.</p></article>
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud3Title">Репетитор или логопед</h3><p data-i18n="aud3Text">Направления, формат занятий, опыт, отзывы и запись на знакомство.</p></article>
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud4Title">Мастер по ремонту</h3><p data-i18n="aud4Text">Какие задачи берете, район, стоимость выезда и быстрый контакт.</p></article>
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud5Title">Консультант</h3><p data-i18n="aud5Text">Личное предложение, продукты, ответы на частые вопросы и заявка.</p></article>
+          <article><span class="mini-orb" aria-hidden="true"><i></i></span><h3 data-i18n="aud6Title">Творческий человек</h3><p data-i18n="aud6Text">Портфолио, история, варианты сотрудничества и ссылка для рекомендаций.</p></article>
+        </div>
+      </section>
+
+      <section class="inside" id="inside" aria-labelledby="inside-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="insideKicker">Что будет внутри</p>
+          <h2 id="inside-title" data-i18n="insideTitle">Ваша короткая презентация, сильные стороны и понятное предложение</h2>
+        </div>
+        <div class="inside-list">
+          <div><strong data-i18n="inside1Title">С первого взгляда</strong><span data-i18n="inside1Text">человек сразу понимает, кто вы и зачем к вам обращаться</span></div>
+          <div><strong data-i18n="inside2Title">Ваше предложение</strong><span data-i18n="inside2Text">услуги, форматы, цены или условия простыми словами</span></div>
+          <div><strong data-i18n="inside3Title">Доверие</strong><span data-i18n="inside3Text">фото, работы, отзывы, результаты или история</span></div>
+          <div><strong data-i18n="inside4Title">Связь без поиска</strong><span data-i18n="inside4Text">Telegram, Max, SMS, звонок</span></div>
+          <div><strong data-i18n="inside5Title">Ссылка для рекомендаций</strong><span data-i18n="inside5Text">ее удобно переслать клиенту, знакомым или в чат</span></div>
+        </div>
+      </section>
+
+      <section class="request" id="request" aria-labelledby="request-title">
+        <div class="request__copy">
+          <p class="section-kicker" data-i18n="requestKicker">Быстрая заявка</p>
+          <h2 id="request-title" data-i18n="requestTitle">Соберите текст обращения</h2>
+          <p data-i18n="requestText">Выберите, для какого дела нужна интернет-визитка, и отправьте мне готовое сообщение.</p>
+        </div>
+        <div class="request-box">
+          <div class="choice-group" data-choice-group="person">
+            <p data-i18n="choicePerson">Для кого</p>
+            <button type="button" class="choice is-active" data-choice-key="beauty">Бьюти-мастер</button>
+            <button type="button" class="choice" data-choice-key="handmade">Ручная работа</button>
+            <button type="button" class="choice" data-choice-key="teacher">Репетитор</button>
+            <button type="button" class="choice" data-choice-key="home">Мастер по ремонту</button>
+            <button type="button" class="choice" data-choice-key="consult">Консультант</button>
+            <button type="button" class="choice" data-choice-key="creative">Творческий проект</button>
+          </div>
+          <div class="message-card" aria-live="polite">
+            <small data-i18n="messageHint">Ниже готовый текст. Его можно отправить в Telegram, Max или скопировать.</small>
+            <p id="messageText">Светлана, здравствуйте! Хочу интернет-визитку для бьюти-мастера.</p>
+            <div class="message-card__actions">
+              <a class="button button--primary" id="sendTelegram" href="https://t.me/svetlana_helper" target="_blank" rel="noreferrer" data-i18n="sendTelegram">Написать в Telegram</a>
+              <a class="button button--ghost" id="sendMax" href="https://max.ru/join/-0DHObg3heKBuc7QZIStvfrPVQbuENBph3rYUyJzY74" target="_blank" rel="noreferrer" data-i18n="sendMax" data-max-contact>Написать в Max</a>
+            </div>
+            <button class="copy-link" id="copyMessage" type="button" data-i18n="copyButton">Скопировать текст</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="style-lab" id="style-lab" aria-labelledby="style-title">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="styleKicker">Примерка для вашей визитки</p>
+          <h2 id="style-title" data-i18n="styleTitle">Покрутите цвет и шрифт: так можно будет подобрать настроение под вас</h2>
+        </div>
+        <div class="style-panel">
+          <div>
+            <p data-i18n="paletteLabel">Цветовая гамма</p>
+            <div class="swatches" aria-label="Цветовая гамма">
+              <button class="swatch is-active" type="button" data-theme-option="sand"><span style="--a:#f5f5f0;--b:#708090"></span><b data-theme-label="sand">Сталью по белому песку</b></button>
+              <button class="swatch" type="button" data-theme-option="mint"><span style="--a:#fcfbe3;--b:#4caf8c"></span><b data-theme-label="mint">Мятным по кремовому</b></button>
+              <button class="swatch" type="button" data-theme-option="peach"><span style="--a:#f8f9fa;--b:#ffdab9"></span><b data-theme-label="peach">Персиком по облачному</b></button>
+              <button class="swatch" type="button" data-theme-option="sage"><span style="--a:#e8eae6;--b:#b2ac88"></span><b data-theme-label="sage">Шалфеем по туману</b></button>
+              <button class="swatch" type="button" data-theme-option="rose"><span style="--a:#f0f8ff;--b:#d4a5a5"></span><b data-theme-label="rose">Пепельной розой по льду</b></button>
+              <button class="swatch" type="button" data-theme-option="lavender"><span style="--a:#f3f4f7;--b:#a29bfe"></span><b data-theme-label="lavender">Лавандой по жемчужному</b></button>
+              <button class="swatch" type="button" data-theme-option="plum"><span style="--a:#f8f3ff;--b:#b18ad8"></span><b data-theme-label="plum">Сливой по жемчужному</b></button>
+              <button class="swatch" type="button" data-theme-option="pistachio"><span style="--a:#fff9ee;--b:#93c572"></span><b data-theme-label="pistachio">Фисташковым по молочному</b></button>
+              <button class="swatch" type="button" data-theme-option="powder"><span style="--a:#fff0f5;--b:#87ceeb"></span><b data-theme-label="powder">Небесным по пудре</b></button>
+            </div>
+          </div>
+          <div>
+            <p data-i18n="fontLabel">Шрифт</p>
+            <div class="font-options" aria-label="Шрифт">
+              <button class="font-choice is-active" type="button" data-font-option="soft" data-i18n="fontSoft">Avenir</button>
+              <button class="font-choice" type="button" data-font-option="editorial" data-i18n="fontEditorial">Georgia</button>
+              <button class="font-choice" type="button" data-font-option="bold" data-i18n="fontBold">Arial Black</button>
+              <button class="font-choice" type="button" data-font-option="brutal" data-i18n="fontBrutal">Impact</button>
+              <button class="font-choice" type="button" data-font-option="airy" data-i18n="fontAiry">Optima</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <p class="section-kicker" data-i18n="contactsKicker">Контакты</p>
+        <h2 data-i18n="contactsTitle">Свяжитесь со мной</h2>
+      </div>
+      <div class="footer__actions">
+        <a class="button button--primary" href="https://t.me/svetlana_helper" target="_blank" rel="noreferrer" data-i18n="contactTelegram">Telegram</a>
+        <a class="button button--ghost" href="https://max.ru/join/-0DHObg3heKBuc7QZIStvfrPVQbuENBph3rYUyJzY74" target="_blank" rel="noreferrer" data-max-contact>Max</a>
+        <a class="button button--ghost" href="sms:" data-i18n="contactSms" data-ru-contact>SMS</a>
+        <a class="button button--ghost" href="tel:" data-i18n="contactCall" data-ru-contact>Звонок</a>
+      </div>
+    </footer>
+
+    <script src="../script.js?v=visual-builder-56"></script>
+  </body>
+</html>
