@@ -222,7 +222,7 @@ const dictionaries = {
     navInside: "Co w środku",
     navRequest: "Zapytanie",
     heroKicker: "Strona pod linkiem dla Twojej pracy",
-    heroTitle: "Twoja internetowa wizytówka",
+    heroTitle: "Twoja internetowa\nwizytówka",
     heroLead: "Dla twórcy, specjalisty albo osoby kreatywnej: kim jesteś, co proponujesz, czym się wyróżniasz i jak szybko się z Tobą skontaktować.",
     optionPhoto: "wybierz: ze zdjęciem",
     optionLogo: "albo z logo / znakiem",

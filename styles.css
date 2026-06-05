@@ -520,9 +520,10 @@ h3 {
 h1 {
   max-width: 620px;
   margin-bottom: 22px;
-  font-size: clamp(38px, 5.1vw, 66px);
-  line-height: 1;
+  font-size: clamp(34px, 4.6vw, 58px);
+  line-height: 1.03;
   font-weight: 820;
+  white-space: pre-line;
 }
 
 h2 {
@@ -1285,8 +1286,9 @@ main {
     grid-row: 2;
     align-self: center;
     margin-bottom: 0;
-    font-size: clamp(24px, 6.7vw, 30px);
-    max-width: min(190px, 100%);
+    font-size: clamp(19px, 5.4vw, 24px);
+    line-height: 1.08;
+    max-width: min(170px, 100%);
     position: relative;
     z-index: 2;
   }
