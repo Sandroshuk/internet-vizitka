@@ -530,9 +530,39 @@ h3 {
 .hero__lead {
   max-width: 590px;
   margin-bottom: 26px;
-  color: var(--muted);
-  font-size: clamp(21px, 2.75vw, 30px);
-  line-height: 1.45;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 82%, var(--accent-soft));
+  box-shadow: 0 16px 42px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.hero__lead p {
+  margin: 0 0 10px;
+  color: color-mix(in srgb, var(--ink) 76%, var(--muted));
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.35;
+}
+
+.hero__lead-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero__lead-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.48);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 720;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .price-strip {
@@ -1300,8 +1330,21 @@ main {
   .hero__lead {
     grid-column: 1 / -1;
     margin-top: 12px;
-    font-size: 18px;
-    line-height: 1.48;
+    padding: 12px;
+  }
+
+  .hero__lead p {
+    font-size: 16px;
+  }
+
+  .hero__lead-tags {
+    gap: 7px;
+  }
+
+  .hero__lead-tags span {
+    min-height: 30px;
+    padding: 6px 9px;
+    font-size: 13px;
   }
 
   .price-strip,
