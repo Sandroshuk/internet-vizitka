@@ -557,15 +557,15 @@ h3 {
 }
 
 .hero__lead-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
 .hero__lead-tags span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 32px;
   padding: 7px 10px;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
@@ -576,7 +576,8 @@ h3 {
   font-weight: 720;
   line-height: 1.1;
   white-space: nowrap;
-  animation: tagPulse 3.8s ease-in-out infinite;
+  text-align: center;
+  animation: tagPulse 3.2s ease-in-out infinite;
 }
 
 .hero__lead-tags span:nth-child(2) {
@@ -1169,9 +1170,9 @@ main {
     background: rgba(255, 255, 255, 0.48);
   }
   48% {
-    transform: translateY(-2px) scale(1.025);
-    box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 18%, transparent);
-    background: color-mix(in srgb, var(--accent-soft) 58%, rgba(255, 255, 255, 0.68));
+    transform: translateY(-3px) scale(1.075);
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--accent) 28%, transparent);
+    background: color-mix(in srgb, var(--accent-soft) 70%, rgba(255, 255, 255, 0.74));
   }
 }
 
@@ -1394,8 +1395,8 @@ main {
 
   .hero__lead-tags span {
     min-height: 30px;
-    padding: 6px 9px;
-    font-size: 13px;
+    padding: 6px 7px;
+    font-size: 12px;
   }
 
   .price-strip,
