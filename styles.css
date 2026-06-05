@@ -537,7 +537,7 @@ h3 {
   max-width: 590px;
   margin-bottom: 26px;
   color: var(--muted);
-  font-size: clamp(18px, 2.3vw, 25px);
+  font-size: clamp(20px, 2.55vw, 28px);
   line-height: 1.45;
 }
 
@@ -566,8 +566,8 @@ h3 {
 }
 
 .price-strip strong {
-  font-size: clamp(24px, 3.6vw, 42px);
-  line-height: 1;
+  font-size: clamp(21px, 3.05vw, 34px);
+  line-height: 1.04;
   font-family: var(--display-font);
 }
 
@@ -1280,8 +1280,9 @@ main {
 
   .hero__lead {
     grid-column: 1 / -1;
-    margin-top: 8px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.48;
   }
 
   .price-strip,
@@ -1343,7 +1344,8 @@ main {
   }
 
   .price-strip strong {
-    font-size: clamp(23px, 7vw, 31px);
+    font-size: clamp(20px, 6vw, 27px);
+    line-height: 1.08;
   }
 
   .hero__actions {
