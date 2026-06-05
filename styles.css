@@ -693,7 +693,7 @@ main {
 
 .swatches {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, auto));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
 }
 
@@ -720,11 +720,17 @@ main {
   gap: 9px;
   padding: 8px 12px;
   min-width: 0;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 560;
+  line-height: 1.15;
 }
 
 .swatch.is-active {
   grid-column: span 2;
-  min-width: min(100%, 300px);
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 640;
 }
 
 .swatch span {
@@ -737,6 +743,7 @@ main {
 
 .swatch b {
   font: inherit;
+  text-align: left;
 }
 
 .font-choice,
@@ -1305,13 +1312,13 @@ main {
     justify-content: flex-start;
     min-height: 58px;
     padding: 10px 12px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .swatch.is-active {
     grid-column: 1 / -1;
     min-height: 66px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .swatch span {
