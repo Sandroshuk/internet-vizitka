@@ -809,6 +809,27 @@ main {
   padding: 10px 14px;
 }
 
+.choice {
+  transform-origin: center;
+  transition: transform 180ms cubic-bezier(0.2, 1.35, 0.35, 1), box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.choice:hover,
+.choice:focus-visible {
+  transform: translateY(-2px) scale(1.025);
+  border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.choice.is-active {
+  border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
+  box-shadow: var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+.choice.is-bouncing {
+  animation: choiceSpring 620ms cubic-bezier(0.2, 1.2, 0.22, 1) both;
+}
+
 .font-choice {
   min-width: 0;
 }
@@ -1184,6 +1205,24 @@ main {
   46%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes choiceSpring {
+  0% {
+    transform: scale(1);
+  }
+  34% {
+    transform: scale(1.17) translateY(-4px);
+  }
+  58% {
+    transform: scale(0.94) translateY(1px);
+  }
+  78% {
+    transform: scale(1.06) translateY(-2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
   }
 }
 

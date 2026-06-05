@@ -390,7 +390,11 @@ choiceGroups.forEach((group) => {
     if (!button) return;
 
     group.querySelectorAll(".choice").forEach((item) => item.classList.remove("is-active"));
+    button.classList.remove("is-bouncing");
+    void button.offsetWidth;
     button.classList.add("is-active");
+    button.classList.add("is-bouncing");
+    window.setTimeout(() => button.classList.remove("is-bouncing"), 620);
     state[groupName] = button.dataset.choiceKey;
     renderMessage();
   });
