@@ -8,6 +8,7 @@ const telegramButton = document.querySelector("#sendTelegram");
 const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
+const navLinks = document.querySelectorAll(".nav__links a");
 
 const dictionaries = {
   ru: {
@@ -371,6 +372,13 @@ audienceCards.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.add("is-tapped");
     window.setTimeout(() => card.classList.remove("is-tapped"), 900);
+  });
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    link.classList.add("is-tapped");
+    window.setTimeout(() => link.classList.remove("is-tapped"), 700);
   });
 });
 
