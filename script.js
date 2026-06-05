@@ -36,7 +36,7 @@ const dictionaries = {
     optionLogo: "или с лого / знаком",
     optionStyle: "примерьте цветовую гамму",
     optionFonts: "подберите настроение шрифта",
-    styleTeaserTitle: "Выбор стиля",
+    styleTeaserTitle: "Ниже можно выбрать стиль: цвет и шрифт",
     priceValue: "не дороже привычного кофе-месяца",
     priceNote: "Около 25 чашек кофе за страницу, которую можно отправлять клиентам, знакомым и новым людям снова и снова.",
     heroPrimary: "Хочу такую визитку",
@@ -143,7 +143,7 @@ const dictionaries = {
     optionLogo: "or with a logo / sign",
     optionStyle: "try a color palette",
     optionFonts: "choose a font mood",
-    styleTeaserTitle: "Style choice",
+    styleTeaserTitle: "Choose a style below: color and font",
     priceValue: "no more than your usual coffee month",
     priceNote: "About 25 cups of coffee for a page you can send to clients, friends and new people again and again.",
     heroPrimary: "I want this page",
@@ -250,7 +250,7 @@ const dictionaries = {
     optionLogo: "albo z logo / znakiem",
     optionStyle: "przymierz kolorystykę",
     optionFonts: "dobierz nastrój pisma",
-    styleTeaserTitle: "Wybór stylu",
+    styleTeaserTitle: "Niżej wybierzesz styl: kolor i pismo",
     priceValue: "nie drożej niż miesiąc codziennej kawy",
     priceNote: "Około 25 kaw za stronę, którą można wysyłać klientom, znajomym i nowym osobom wiele razy.",
     heroPrimary: "Chcę taką wizytówkę",
@@ -354,6 +354,7 @@ const styleTeaserSteps = [
   { theme: "mint", font: 1 },
   { theme: "rose", font: 0 },
   { theme: "pistachio", font: 1 },
+  { theme: "lavender", font: 0 },
 ];
 
 if ("scrollRestoration" in history) {
