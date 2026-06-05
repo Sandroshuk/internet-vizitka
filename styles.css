@@ -149,6 +149,10 @@ body {
   font-family: var(--text-font);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;

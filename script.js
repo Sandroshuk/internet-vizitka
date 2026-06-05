@@ -9,6 +9,7 @@ const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
 const navLinks = document.querySelectorAll(".nav__links a");
+const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-ru-contact]");
 
 const dictionaries = {
   ru: {
@@ -180,14 +181,14 @@ const dictionaries = {
     inside3Title: "Examples",
     inside3Text: "photos, work, results or reviews",
     inside4Title: "Contact buttons",
-    inside4Text: "Telegram, Max, SMS, call",
+    inside4Text: "Telegram bot",
     inside5Title: "Nice link",
     inside5Text: "easy to send in messages",
     requestKicker: "Quick request",
     requestTitle: "Build your message",
     requestText: "Choose what your internet business card is for and send me a ready message.",
     choicePerson: "For whom",
-    messageHint: "Ready text below. Send it to Telegram, Max or copy it.",
+    messageHint: "Ready text below. Send it to the Telegram bot or copy it.",
     sendTelegram: "Write in Telegram",
     sendMax: "Write in Max",
     copyButton: "Copy text",
@@ -282,14 +283,14 @@ const dictionaries = {
     inside3Title: "Przykłady",
     inside3Text: "zdjęcia, prace, efekty albo opinie",
     inside4Title: "Kontakt",
-    inside4Text: "Telegram, Max, SMS, telefon",
+    inside4Text: "bot Telegram",
     inside5Title: "Ładny link",
     inside5Text: "wygodny do wysłania",
     requestKicker: "Szybkie zapytanie",
     requestTitle: "Złóż tekst wiadomości",
     requestText: "Wybierz, dla czego potrzebna jest internetowa wizytówka, i wyślij mi gotową wiadomość.",
     choicePerson: "Dla kogo",
-    messageHint: "Poniżej gotowy tekst. Można wysłać w Telegramie, Max albo skopiować.",
+    messageHint: "Poniżej gotowy tekst. Można wysłać do bota Telegram albo skopiować.",
     sendTelegram: "Napisz w Telegramie",
     sendMax: "Napisz w Max",
     copyButton: "Skopiuj tekst",
@@ -404,6 +405,10 @@ function setLanguage(lang) {
 
   langButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
+  });
+
+  ruOnlyContacts.forEach((element) => {
+    element.hidden = lang !== "ru";
   });
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
