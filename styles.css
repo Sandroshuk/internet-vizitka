@@ -1102,13 +1102,17 @@ main {
 
 .inside-list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   padding: 10px;
 }
 
 .inside-list div {
-  min-height: 180px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 18px;
   border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--line));
   border-radius: calc(var(--radius) - 4px);
@@ -1122,19 +1126,18 @@ main {
 }
 
 .inside-list div::before {
-  content: "0" counter(inside-step);
-  counter-increment: inside-step;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 18px;
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: color-mix(in srgb, var(--accent-soft) 72%, white);
-  color: color-mix(in srgb, var(--accent) 76%, var(--ink));
-  font-size: 12px;
-  font-weight: 820;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.52),
+    0 0 0 8px color-mix(in srgb, var(--accent-soft) 24%, transparent);
 }
 
 .inside-list div::after {
@@ -1148,10 +1151,6 @@ main {
   opacity: 0;
   transform: translateY(18px) scale(0.8);
   transition: opacity 220ms ease, transform 220ms ease;
-}
-
-.inside-list {
-  counter-reset: inside-step;
 }
 
 .inside-list div:hover,
@@ -1765,13 +1764,35 @@ main {
   }
 
   .inside-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .inside-list div {
-    min-height: auto;
-    border-right: 0;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    padding: 14px;
+    border-right: 1px solid color-mix(in srgb, var(--accent) 14%, var(--line));
     border-bottom: 1px solid color-mix(in srgb, var(--accent) 14%, var(--line));
+    border-radius: 24px;
+  }
+
+  .inside-list div::before {
+    top: 12px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .inside-list strong {
+    margin-bottom: 8px;
+    font-size: clamp(17px, 4.7vw, 21px);
+    line-height: 1.04;
+  }
+
+  .inside-list span {
+    font-size: clamp(12px, 3.55vw, 15px);
+    line-height: 1.28;
   }
 
   .footer {
