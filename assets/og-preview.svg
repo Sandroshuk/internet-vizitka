@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5f0"/>
+      <stop offset="0.56" stop-color="#eef2f1"/>
+      <stop offset="1" stop-color="#f8eadc"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#f5f5f0" stop-opacity="0.84"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#1e2a38" flood-opacity="0.15"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="photoClip">
+      <circle cx="814" cy="504" r="260"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <g opacity="0.28" stroke="#708090" stroke-width="1">
+    <path d="M0 100h1200M0 200h1200M0 300h1200M0 400h1200M0 500h1200M0 600h1200M0 700h1200M0 800h1200M0 900h1200M0 1000h1200M0 1100h1200"/>
+    <path d="M100 0v1200M200 0v1200M300 0v1200M400 0v1200M500 0v1200M600 0v1200M700 0v1200M800 0v1200M900 0v1200M1000 0v1200M1100 0v1200"/>
+  </g>
+
+  <circle cx="860" cy="450" r="360" fill="#f8d9b8" opacity="0.45" filter="url(#soft)"/>
+  <circle cx="210" cy="910" r="260" fill="#aeb8c2" opacity="0.18" filter="url(#soft)"/>
+
+  <rect x="92" y="96" width="1016" height="1008" rx="64" fill="url(#card)" stroke="#ffffff" stroke-width="4" filter="url(#shadow)"/>
+
+  <g transform="translate(156 156)">
+    <rect x="0" y="0" width="322" height="62" rx="31" fill="#ffffff" opacity="0.76" stroke="#d7d9d7"/>
+    <text x="34" y="40" font-family="Avenir Next, Arial, sans-serif" font-size="27" font-weight="700" fill="#708090">открывается по ссылке</text>
+
+    <text x="0" y="180" font-family="Avenir Next, Arial, sans-serif" font-size="72" font-weight="820" fill="#253241">
+      <tspan x="0" dy="0">Интернет-</tspan>
+      <tspan x="0" dy="82">визитка</tspan>
+      <tspan x="0" dy="82">в телефоне</tspan>
+    </text>
+
+    <text x="0" y="508" font-family="Avenir Next, Arial, sans-serif" font-size="34" font-weight="500" fill="#687585">
+      <tspan x="0" dy="0">Кто вы, что предлагаете,</tspan>
+      <tspan x="0" dy="50">примеры и кнопки связи</tspan>
+      <tspan x="0" dy="50">в одном красивом месте.</tspan>
+    </text>
+
+    <g transform="translate(0 728)">
+      <rect x="0" y="0" width="224" height="54" rx="27" fill="#ffffff" opacity="0.78" stroke="#d7d9d7"/>
+      <rect x="246" y="0" width="230" height="54" rx="27" fill="#ffffff" opacity="0.78" stroke="#d7d9d7"/>
+      <text x="30" y="36" font-family="Avenir Next, Arial, sans-serif" font-size="24" font-weight="760" fill="#253241">для мастеров</text>
+      <text x="278" y="36" font-family="Avenir Next, Arial, sans-serif" font-size="24" font-weight="760" fill="#253241">специалистов</text>
+    </g>
+  </g>
+
+  <g transform="translate(650 184)">
+    <rect x="0" y="0" width="378" height="620" rx="66" fill="#ffffff" opacity="0.8" stroke="#d7d9d7" stroke-width="4"/>
+    <rect x="42" y="58" width="294" height="504" rx="42" fill="#eef2f1" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="188" cy="320" r="266" fill="#d9c2ad" opacity="0.34"/>
+    <g clip-path="url(#photoClip)" transform="translate(-650 -184)">
+      <image href="svetlana-cutout.png" x="594" y="194" width="520" height="520" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    <rect x="98" y="514" width="182" height="26" rx="13" fill="#708090" opacity="0.36"/>
+  </g>
+
+  <text x="156" y="1054" font-family="Avenir Next, Arial, sans-serif" font-size="34" font-weight="760" fill="#708090">Светлана Андрощук</text>
+</svg>
