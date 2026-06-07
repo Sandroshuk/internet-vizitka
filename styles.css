@@ -513,6 +513,14 @@ h1 {
   hyphens: manual;
 }
 
+.hero__subtitle {
+  max-width: 590px;
+  margin: -8px 0 18px;
+  color: var(--muted);
+  font-size: clamp(17px, 1.75vw, 22px);
+  line-height: 1.42;
+}
+
 h2 {
   margin-bottom: 0;
   max-width: 830px;
@@ -1549,12 +1557,20 @@ main {
     grid-row: 2;
     align-self: center;
     margin: 0;
-    font-size: clamp(17px, 4.9vw, 23px);
+    font-size: clamp(18px, 5.15vw, 24px);
     line-height: 1.06;
     max-width: 100%;
     white-space: pre-line;
     position: relative;
     z-index: 2;
+  }
+
+  .hero__subtitle {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 1.38;
   }
 
   h2 {
