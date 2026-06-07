@@ -5,6 +5,7 @@ const choiceGroups = document.querySelectorAll("[data-choice-group]");
 const messageText = document.querySelector("#messageText");
 const copyButton = document.querySelector("#copyMessage");
 const telegramButton = document.querySelector("#sendTelegram");
+const contactTelegramButton = document.querySelector("#contactTelegram");
 const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
@@ -18,6 +19,7 @@ const styleTeaserName = document.querySelector(".style-teaser__name");
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 let heroLeadTimer;
 let styleTeaserIndex = 0;
+const telegramUrl = "https://t.me/Vizi2026_bot";
 
 const dictionaries = {
   ru: {
@@ -481,7 +483,8 @@ function setLanguage(lang) {
 function renderMessage() {
   const dictionary = dictionaries[state.lang];
   messageText.textContent = dictionary.message.replace("{person}", dictionary.people[state.person]);
-  telegramButton.href = `https://t.me/svetlana_helper?text=${encodeURIComponent(messageText.textContent)}`;
+  telegramButton.href = `${telegramUrl}?text=${encodeURIComponent(messageText.textContent)}`;
+  contactTelegramButton.href = telegramUrl;
 }
 
 function renderVisualToggle() {
