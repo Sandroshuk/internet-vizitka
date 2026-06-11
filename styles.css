@@ -355,7 +355,7 @@ main,
 }
 
 .visual-card {
-  min-height: clamp(330px, 43vw, 500px);
+  min-height: clamp(300px, 38vw, 450px);
   position: relative;
   display: grid;
   place-items: center;
@@ -422,7 +422,7 @@ body[data-visual="sphere"] .visual-toggle__icon::after {
 }
 
 .visual-card__photo img {
-  width: min(74%, 350px);
+  width: min(68%, 310px);
   height: auto;
   display: block;
   object-fit: contain;
@@ -512,7 +512,7 @@ h3 {
 h1 {
   max-width: 620px;
   margin-bottom: 14px;
-  font-size: clamp(32px, 4.4vw, 54px);
+  font-size: clamp(29px, 3.85vw, 47px);
   line-height: 1.03;
   font-weight: 820;
   white-space: pre-line;
@@ -532,7 +532,7 @@ h1 {
 h2 {
   margin-bottom: 0;
   max-width: 830px;
-  font-size: clamp(23px, 3.05vw, 36px);
+  font-size: clamp(21px, 2.7vw, 32px);
   line-height: 1.12;
   font-weight: 780;
 }
@@ -827,7 +827,7 @@ main {
 .section-head h2,
 .footer h2 {
   max-width: 720px;
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(20px, 2.7vw, 30px);
   line-height: 1.14;
 }
 
@@ -1458,24 +1458,24 @@ main {
     grid-column: 1 / -1;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     color: var(--ink);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 760;
     box-shadow: none;
   }
 
   .nav__links a {
-    min-height: 42px;
+    min-height: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 6px;
+    padding: 9px 4px;
     border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--line));
     border-radius: 12px;
     text-align: center;
@@ -1504,7 +1504,7 @@ main {
   }
 
   .hero__layout {
-    grid-template-columns: minmax(104px, 34vw) minmax(0, 1fr);
+    grid-template-columns: minmax(92px, 30vw) minmax(0, 1fr);
     gap: 8px 12px;
     align-items: center;
   }
@@ -1522,7 +1522,7 @@ main {
   .visual-card {
     grid-column: 1;
     grid-row: 2;
-    min-height: clamp(190px, 47vw, 250px);
+    min-height: clamp(158px, 39vw, 210px);
     margin: 0;
     z-index: 3;
   }
@@ -1538,12 +1538,12 @@ main {
 
   .visual-card__photo img,
   .visual-card__sphere svg {
-    width: min(108%, 218px);
+    width: min(102%, 188px);
   }
 
   .visual-card__photo img {
     height: auto;
-    max-height: 230px;
+    max-height: 198px;
     object-fit: contain;
   }
 
@@ -1552,7 +1552,7 @@ main {
     grid-row: 2;
     align-self: center;
     margin: 0;
-    font-size: clamp(22px, 6.7vw, 31px);
+    font-size: clamp(19px, 5.7vw, 27px);
     line-height: 1.06;
     max-width: 100%;
     white-space: pre-line;
@@ -1569,14 +1569,14 @@ main {
   }
 
   h2 {
-    font-size: clamp(21px, 5.7vw, 26px);
+    font-size: clamp(18px, 5vw, 23px);
     line-height: 1.12;
     max-width: 100%;
   }
 
   .section-head h2,
   .footer h2 {
-    font-size: clamp(22px, 5.95vw, 27px);
+    font-size: clamp(19px, 5.25vw, 24px);
     line-height: 1.16;
   }
 
