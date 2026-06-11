@@ -26,6 +26,7 @@ const maxBotUrl = "";
 const dictionaries = {
   ru: {
     brand: "Светлана Андрощук",
+    brandSub: "Интернет-визитки",
     navFor: "Для кого",
     navInside: "Что внутри",
     navRequest: "Заявка",
@@ -137,6 +138,7 @@ const dictionaries = {
   },
   en: {
     brand: "Svetlana Androshchuk",
+    brandSub: "Internet business cards",
     navFor: "For whom",
     navInside: "Inside",
     navRequest: "Request",
@@ -248,6 +250,7 @@ const dictionaries = {
   },
   pl: {
     brand: "Svetlana Androshchuk",
+    brandSub: "Wizytówki internetowe",
     navFor: "Dla kogo",
     navInside: "Co w środku",
     navRequest: "Zapytanie",
