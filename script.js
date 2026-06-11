@@ -6,6 +6,7 @@ const messageText = document.querySelector("#messageText");
 const copyButton = document.querySelector("#copyMessage");
 const telegramButton = document.querySelector("#sendTelegram");
 const contactTelegramButton = document.querySelector("#contactTelegram");
+const maxButtons = document.querySelectorAll("[data-max-contact]");
 const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
@@ -20,6 +21,7 @@ const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 let heroLeadTimer;
 let styleTeaserIndex = 0;
 const telegramUrl = "https://t.me/Vizi2026_bot";
+const maxBotUrl = "";
 
 const dictionaries = {
   ru: {
@@ -74,18 +76,18 @@ const dictionaries = {
     },
     audienceKicker: "Кому подойдет",
     audienceTitle: "Чтобы вас было легко показать, понять и рекомендовать",
-    aud1Title: "Бьюти-мастер",
-    aud1Text: "Услуги, фото работ, цены, запись и кнопка “написать”.",
-    aud2Title: "Ручная работа",
-    aud2Text: "Что вы создаете, примеры, сроки, доставка и как заказать.",
-    aud3Title: "Репетитор или логопед",
-    aud3Text: "Направления, формат занятий, опыт, отзывы и запись на знакомство.",
-    aud4Title: "Мастер по ремонту",
-    aud4Text: "Какие задачи берете, район, стоимость выезда и быстрый контакт.",
-    aud5Title: "Консультант",
-    aud5Text: "Личное предложение, продукты, ответы на частые вопросы и заявка.",
-    aud6Title: "Творческий человек",
-    aud6Text: "Портфолио, история, варианты сотрудничества и ссылка для рекомендаций.",
+    aud1Title: "Маникюр",
+    aud1Text: "Работы, цены, свободные окна и кнопка записи.",
+    aud2Title: "Парикмахер",
+    aud2Text: "Услуги, фото “до/после”, прайс и быстрый контакт.",
+    aud3Title: "Репетитор",
+    aud3Text: "Предметы, формат занятий, опыт, отзывы и запись.",
+    aud4Title: "Логопед",
+    aud4Text: "С чем работаете, возраст, формат, диагностика и связь.",
+    aud5Title: "Грузоперевозки",
+    aud5Text: "Маршруты, авто, цены, сроки и кнопка заявки.",
+    aud6Title: "Мастер по ремонту",
+    aud6Text: "Какие задачи берете, район, стоимость выезда и контакт.",
     insideKicker: "Что будет внутри",
     insideTitle: "Ваша короткая презентация, сильные стороны и понятное предложение",
     inside1Title: "С первого взгляда",
@@ -95,7 +97,7 @@ const dictionaries = {
     inside3Title: "Доверие",
     inside3Text: "фото, работы, отзывы, результаты или история",
     inside4Title: "Контакты",
-    inside4Text: "Telegram, Max, SMS, звонок",
+    inside4Text: "Telegram-бот, SMS, звонок",
     inside5Title: "Ссылка для рекомендаций",
     inside5Text: "ее удобно переслать клиенту, знакомым или в чат",
     inside6Title: "Первый шаг",
@@ -104,7 +106,7 @@ const dictionaries = {
     requestTitle: "Соберите текст обращения",
     requestText: "Выберите, для какого дела нужна интернет-визитка, и отправьте мне готовое сообщение.",
     choicePerson: "Для кого",
-    messageHint: "Ниже готовый текст. Его можно отправить в Telegram, Max или скопировать.",
+    messageHint: "Ниже готовый текст. Его можно отправить в Telegram-бот или скопировать.",
     sendTelegram: "Написать в Telegram",
     sendMax: "Написать в Max",
     copyButton: "Скопировать текст",
@@ -116,20 +118,20 @@ const dictionaries = {
     contactCall: "Звонок",
     message: "Светлана, здравствуйте! Хочу интернет-визитку для {person}.",
     personLabels: {
-      beauty: "Бьюти-мастер",
-      handmade: "Ручная работа",
+      beauty: "Маникюр",
+      handmade: "Парикмахер",
       teacher: "Репетитор",
       home: "Мастер по ремонту",
-      consult: "Консультант",
-      creative: "Творческий проект",
+      consult: "Грузоперевозки",
+      creative: "Логопед",
     },
     people: {
-      beauty: "бьюти-мастера",
-      handmade: "моих изделий ручной работы",
-      teacher: "репетитора или логопеда",
+      beauty: "мастера маникюра",
+      handmade: "парикмахера",
+      teacher: "репетитора",
+      creative: "логопеда",
       home: "мастера по ремонту",
-      consult: "консультанта",
-      creative: "творческого проекта",
+      consult: "грузоперевозок",
     },
   },
   en: {
@@ -184,18 +186,18 @@ const dictionaries = {
     },
     audienceKicker: "For whom",
     audienceTitle: "So people can quickly understand you and recommend you",
-    aud1Title: "Beauty specialist",
-    aud1Text: "Services, work photos, prices, booking and a write button.",
-    aud2Title: "Handmade work",
-    aud2Text: "What you make, examples, timing, delivery and how to order.",
-    aud3Title: "Tutor or speech therapist",
-    aud3Text: "Topics, lesson format, experience, reviews and intro booking.",
-    aud4Title: "Repair specialist",
-    aud4Text: "What tasks you take, area, visit price and quick contact.",
-    aud5Title: "Consultant",
-    aud5Text: "Personal offer, products, common answers and a request button.",
-    aud6Title: "Creative person",
-    aud6Text: "Portfolio, story, cooperation options and a link for referrals.",
+    aud1Title: "Manicure",
+    aud1Text: "Work photos, prices, free slots and a booking button.",
+    aud2Title: "Hair stylist",
+    aud2Text: "Services, before/after photos, prices and quick contact.",
+    aud3Title: "Tutor",
+    aud3Text: "Subjects, lesson format, experience, reviews and booking.",
+    aud4Title: "Speech therapist",
+    aud4Text: "What you work with, age, format, diagnostics and contact.",
+    aud5Title: "Moving services",
+    aud5Text: "Routes, vehicle, prices, timing and a request button.",
+    aud6Title: "Repair specialist",
+    aud6Text: "Tasks, area, visit cost and quick contact.",
     insideKicker: "What is inside",
     insideTitle: "Your short presentation, strengths and clear offer",
     inside1Title: "Clear at first glance",
@@ -226,20 +228,20 @@ const dictionaries = {
     contactCall: "Call",
     message: "Hello Svetlana! I would like an internet business card for {person}.",
     personLabels: {
-      beauty: "Beauty",
-      handmade: "Handmade",
+      beauty: "Manicure",
+      handmade: "Hair stylist",
       teacher: "Tutor",
       home: "Repair",
-      consult: "Consultant",
-      creative: "Creative project",
+      consult: "Moving services",
+      creative: "Speech therapist",
     },
     people: {
-      beauty: "a beauty specialist",
-      handmade: "my handmade products",
-      teacher: "a tutor or speech therapist",
+      beauty: "a manicure specialist",
+      handmade: "a hair stylist",
+      teacher: "a tutor",
       home: "a repair specialist",
-      consult: "a consultant",
-      creative: "a creative project",
+      consult: "moving services",
+      creative: "a speech therapist",
     },
   },
   pl: {
@@ -294,18 +296,18 @@ const dictionaries = {
     },
     audienceKicker: "Dla kogo",
     audienceTitle: "Żeby łatwo było Cię pokazać, zrozumieć i polecić",
-    aud1Title: "Beauty master",
-    aud1Text: "Usługi, zdjęcia prac, ceny, zapis i przycisk kontaktu.",
-    aud2Title: "Rękodzieło",
-    aud2Text: "Co tworzysz, przykłady, terminy, dostawa i jak zamówić.",
-    aud3Title: "Korepetytor lub logopeda",
-    aud3Text: "Kierunki, forma zajęć, doświadczenie, opinie i zapis na rozmowę.",
-    aud4Title: "Fachowiec od napraw",
-    aud4Text: "Jakie zadania wykonujesz, rejon, koszt dojazdu i szybki kontakt.",
-    aud5Title: "Konsultant",
-    aud5Text: "Osobista oferta, produkty, odpowiedzi na pytania i zgłoszenie.",
-    aud6Title: "Osoba kreatywna",
-    aud6Text: "Portfolio, historia, opcje współpracy i link do polecania.",
+    aud1Title: "Manicure",
+    aud1Text: "Zdjęcia prac, ceny, wolne terminy i przycisk zapisu.",
+    aud2Title: "Fryzjer",
+    aud2Text: "Usługi, zdjęcia przed/po, cennik i szybki kontakt.",
+    aud3Title: "Korepetytor",
+    aud3Text: "Przedmioty, format zajęć, doświadczenie, opinie i zapis.",
+    aud4Title: "Logopeda",
+    aud4Text: "Zakres pracy, wiek, format, diagnoza i kontakt.",
+    aud5Title: "Transport",
+    aud5Text: "Trasy, auto, ceny, terminy i przycisk zgłoszenia.",
+    aud6Title: "Fachowiec od napraw",
+    aud6Text: "Zadania, rejon, koszt dojazdu i szybki kontakt.",
     insideKicker: "Co będzie w środku",
     insideTitle: "Twoja krótka prezentacja, mocne strony i jasna oferta",
     inside1Title: "Od pierwszego spojrzenia",
@@ -336,20 +338,20 @@ const dictionaries = {
     contactCall: "Telefon",
     message: "Dzień dobry, Svetlana! Chcę internetową wizytówkę dla {person}.",
     personLabels: {
-      beauty: "Beauty",
-      handmade: "Rękodzieło",
+      beauty: "Manicure",
+      handmade: "Fryzjer",
       teacher: "Korepetytor",
       home: "Naprawy",
-      consult: "Konsultant",
-      creative: "Projekt kreatywny",
+      consult: "Transport",
+      creative: "Logopeda",
     },
     people: {
-      beauty: "beauty mastera",
-      handmade: "mojego rękodzieła",
-      teacher: "korepetytora albo logopedy",
+      beauty: "manicure",
+      handmade: "fryzjera",
+      teacher: "korepetytora",
       home: "fachowca od napraw",
-      consult: "konsultanta",
-      creative: "projektu kreatywnego",
+      consult: "transportu",
+      creative: "logopedy",
     },
   },
 };
@@ -456,7 +458,8 @@ function setLanguage(lang) {
   });
 
   ruOnlyContacts.forEach((element) => {
-    element.hidden = lang !== "ru";
+    const isMax = element.hasAttribute("data-max-contact");
+    element.hidden = lang !== "ru" || (isMax && !maxBotUrl);
   });
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -485,6 +488,11 @@ function renderMessage() {
   messageText.textContent = dictionary.message.replace("{person}", dictionary.people[state.person]);
   telegramButton.href = `${telegramUrl}?text=${encodeURIComponent(messageText.textContent)}`;
   contactTelegramButton.href = telegramUrl;
+  maxButtons.forEach((button) => {
+    if (maxBotUrl) {
+      button.href = maxBotUrl;
+    }
+  });
 }
 
 function renderVisualToggle() {
