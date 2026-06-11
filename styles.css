@@ -736,8 +736,8 @@ h3 {
 }
 
 .price-strip strong {
-  font-size: clamp(19px, 2.65vw, 30px);
-  line-height: 1.04;
+  font-size: clamp(17px, 2.2vw, 25px);
+  line-height: 1.08;
   font-family: var(--display-font);
 }
 
@@ -866,10 +866,15 @@ main {
 }
 
 .swatches,
-.font-options,
-.choice-group {
+.font-options {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choice-group {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -1173,7 +1178,7 @@ main {
 }
 
 .choice-group p {
-  width: 100%;
+  grid-column: 1 / -1;
 }
 
 .message-card {
@@ -1730,13 +1735,13 @@ main {
   }
 
   .price-strip strong {
-    font-size: clamp(16px, 4.8vw, 21px);
+    font-size: clamp(14px, 4.05vw, 18px);
     line-height: 1.08;
   }
 
   .price-strip p {
-    font-size: 13px;
-    line-height: 1.34;
+    font-size: 12px;
+    line-height: 1.3;
   }
 
   .hero__actions {
@@ -1813,6 +1818,18 @@ main {
   .button {
     min-height: 42px;
     padding: 9px 13px;
+  }
+
+  .choice-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .choice {
+    min-height: 40px;
+    padding: 8px 6px;
+    font-size: 11px;
+    line-height: 1.08;
   }
 
   .footer {
