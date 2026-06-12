@@ -898,7 +898,7 @@ main {
 .section-head h2,
 .footer h2 {
   max-width: 720px;
-  font-size: clamp(20px, 2.7vw, 30px);
+  font-size: clamp(18px, 2.35vw, 26px);
   line-height: 1.14;
 }
 
@@ -1821,7 +1821,7 @@ main {
 
   .section-head h2,
   .footer h2 {
-    font-size: clamp(19px, 5.25vw, 24px);
+    font-size: clamp(17px, 4.65vw, 21px);
     line-height: 1.16;
   }
 
