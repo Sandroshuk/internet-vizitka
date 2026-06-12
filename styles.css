@@ -1021,6 +1021,21 @@ main {
   animation-delay: 2.75s;
 }
 
+.audience-grid article:nth-child(7),
+.inside-list div:nth-child(7) {
+  animation-delay: 3.3s;
+}
+
+.audience-grid article:nth-child(8),
+.inside-list div:nth-child(8) {
+  animation-delay: 3.85s;
+}
+
+.audience-grid article:nth-child(9),
+.inside-list div:nth-child(9) {
+  animation-delay: 4.4s;
+}
+
 .audience-grid article::after {
   content: "";
   position: absolute;
