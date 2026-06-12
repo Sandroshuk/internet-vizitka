@@ -7,11 +7,12 @@ const copyButton = document.querySelector("#copyMessage");
 const telegramButton = document.querySelector("#sendTelegram");
 const contactTelegramButton = document.querySelector("#contactTelegram");
 const maxButtons = document.querySelectorAll("[data-max-contact]");
+const vkButtons = document.querySelectorAll("[data-vk-contact]");
 const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
 const audienceCards = document.querySelectorAll(".audience-grid article");
 const navLinks = document.querySelectorAll(".nav__links a");
-const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-ru-contact]");
+const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-vk-contact], [data-ru-contact]");
 const heroLeadIntro = document.querySelector("[data-i18n='heroLeadIntro']");
 const styleTeaser = document.querySelector(".style-teaser");
 const styleTeaserSwatches = document.querySelectorAll(".style-teaser__swatch");
@@ -22,6 +23,7 @@ let heroLeadTimer;
 let styleTeaserIndex = 0;
 const telegramUrl = "https://t.me/Vizi2026_bot";
 const maxBotUrl = "";
+const vkUrl = "";
 
 const dictionaries = {
   ru: {
@@ -513,7 +515,8 @@ function setLanguage(lang) {
 
   ruOnlyContacts.forEach((element) => {
     const isMax = element.hasAttribute("data-max-contact");
-    element.hidden = lang !== "ru" || (isMax && !maxBotUrl);
+    const isVk = element.hasAttribute("data-vk-contact");
+    element.hidden = lang !== "ru" || (isMax && !maxBotUrl) || (isVk && !vkUrl);
   });
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -545,6 +548,11 @@ function renderMessage() {
   maxButtons.forEach((button) => {
     if (maxBotUrl) {
       button.href = maxBotUrl;
+    }
+  });
+  vkButtons.forEach((button) => {
+    if (vkUrl) {
+      button.href = vkUrl;
     }
   });
 }
