@@ -1396,12 +1396,7 @@ main {
 }
 
 .footer__actions {
-  width: min(520px, 100%);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 10px;
-  margin-top: 0;
+  align-items: center;
 }
 
 .contact-pill {
@@ -2136,21 +2131,9 @@ main {
     gap: 14px;
   }
 
-  .footer__actions {
-    width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 7px;
-  }
-
+  .footer__actions .button,
   .message-card__actions .button {
     width: 100%;
-  }
-
-  .footer__actions .button {
-    width: auto;
-    min-width: 0;
-    padding-inline: 8px;
-    font-size: 11px;
   }
 
   .footer__legal {
