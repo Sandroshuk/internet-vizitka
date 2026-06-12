@@ -65,6 +65,10 @@ const dictionaries = {
     fontBold: "Arial Black",
     fontBrutal: "Impact",
     fontAiry: "Optima",
+    fontSnell: "Snell",
+    fontScript: "Script",
+    fontDidot: "Didot",
+    fontPalatino: "Palatino",
     themeLabels: {
       sand: "Сталью по белому песку",
       mint: "Мятным по кремовому",
@@ -189,6 +193,10 @@ const dictionaries = {
     fontBold: "Arial Black",
     fontBrutal: "Impact",
     fontAiry: "Optima",
+    fontSnell: "Snell",
+    fontScript: "Script",
+    fontDidot: "Didot",
+    fontPalatino: "Palatino",
     themeLabels: {
       sand: "Steel over White Sand",
       mint: "Mint over Cream",
@@ -313,6 +321,10 @@ const dictionaries = {
     fontBold: "Arial Black",
     fontBrutal: "Impact",
     fontAiry: "Optima",
+    fontSnell: "Snell",
+    fontScript: "Script",
+    fontDidot: "Didot",
+    fontPalatino: "Palatino",
     themeLabels: {
       sand: "Stalą po białym piasku",
       mint: "Miętą po kremowym",
