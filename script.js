@@ -10,7 +10,7 @@ const maxButtons = document.querySelectorAll("[data-max-contact]");
 const vkButtons = document.querySelectorAll("[data-vk-contact]");
 const visualToggle = document.querySelector("#visualToggle");
 const visualToggleText = document.querySelector("#visualToggleText");
-const audienceCards = document.querySelectorAll(".audience-grid article");
+const tileCards = document.querySelectorAll(".audience-grid article, .inside-list div, .pricing-grid article");
 const navLinks = document.querySelectorAll(".nav__links a");
 const ruOnlyContacts = document.querySelectorAll("[data-max-contact], [data-vk-contact], [data-ru-contact]");
 const heroLeadIntro = document.querySelector("[data-i18n='heroLeadIntro']");
@@ -59,7 +59,7 @@ const dictionaries = {
     marqueeCreative: "творческому человеку",
     marqueeConsult: "консультанту",
     styleKicker: "Примерка для вашей визитки",
-    styleTitle: "Покрутите цвет и шрифт: так можно будет подобрать настроение под вас",
+    styleTitle: "• покрутите цвет и шрифт: так можно будет подобрать настроение под вас",
     paletteLabel: "Цветовая гамма",
     fontLabel: "Шрифт",
     fontSoft: "Avenir",
@@ -72,7 +72,7 @@ const dictionaries = {
     fontDidot: "Didot",
     fontPalatino: "Palatino",
     pricingKicker: "Стоимость",
-    pricingTitle: "Выберите удобный вариант",
+    pricingTitle: "• выберите удобный вариант",
     pricePlan1Name: "База",
     pricePlan1Value: "1590 ₽",
     pricePlan1Text: "После утвержденной публикации правки и дополнения — 800 ₽.",
@@ -129,7 +129,7 @@ const dictionaries = {
     inside6Title: "Первый шаг",
     inside6Text: "что человеку сделать дальше: написать, записаться, выбрать или задать вопрос",
     requestKicker: "Быстрая заявка",
-    requestTitle: "Соберите текст обращения",
+    requestTitle: "• соберите текст обращения",
     requestText: "Выберите, для какого дела нужна интернет-визитка, и отправьте мне готовое сообщение.",
     choicePerson: "Для кого",
     messageHint: "Ниже готовый текст. Его можно отправить в Telegram-бот или скопировать.",
@@ -138,7 +138,7 @@ const dictionaries = {
     copyButton: "Скопировать текст",
     copiedButton: "Текст скопирован",
     contactsKicker: "Контакты",
-    contactsTitle: "Свяжитесь со мной",
+    contactsTitle: "• свяжитесь со мной",
     contactTelegram: "Telegram",
     contactSms: "SMS",
     contactCall: "Звонок",
@@ -199,7 +199,7 @@ const dictionaries = {
     marqueeCreative: "creative person",
     marqueeConsult: "consultant",
     styleKicker: "Try your future card",
-    styleTitle: "Play with color and font: this is how we can choose the mood for you",
+    styleTitle: "• play with color and font to choose the right mood",
     paletteLabel: "Color palette",
     fontLabel: "Font",
     fontSoft: "Avenir",
@@ -212,7 +212,7 @@ const dictionaries = {
     fontDidot: "Didot",
     fontPalatino: "Palatino",
     pricingKicker: "Price",
-    pricingTitle: "Choose a convenient option",
+    pricingTitle: "• choose a convenient option",
     pricePlan1Name: "Base",
     pricePlan1Value: "1590 ₽",
     pricePlan1Text: "After the approved publication, edits and additions are 800 ₽.",
@@ -269,7 +269,7 @@ const dictionaries = {
     inside6Title: "First step",
     inside6Text: "what to do next: write, book, choose or ask a question",
     requestKicker: "Quick request",
-    requestTitle: "Build your message",
+    requestTitle: "• build your message",
     requestText: "Choose what your internet business card is for and send me a ready message.",
     choicePerson: "For whom",
     messageHint: "Ready text below. Send it to the Telegram bot or copy it.",
@@ -278,7 +278,7 @@ const dictionaries = {
     copyButton: "Copy text",
     copiedButton: "Copied",
     contactsKicker: "Contacts",
-    contactsTitle: "Contact me",
+    contactsTitle: "• contact me",
     contactTelegram: "Telegram",
     contactSms: "SMS",
     contactCall: "Call",
@@ -339,7 +339,7 @@ const dictionaries = {
     marqueeCreative: "osoba kreatywna",
     marqueeConsult: "konsultant",
     styleKicker: "Przymiarka Twojej wizytówki",
-    styleTitle: "Zmień kolor i krój pisma: tak można dobrać nastrój pod Ciebie",
+    styleTitle: "• zmień kolor i krój pisma, żeby dobrać nastrój",
     paletteLabel: "Kolorystyka",
     fontLabel: "Krój pisma",
     fontSoft: "Avenir",
@@ -352,7 +352,7 @@ const dictionaries = {
     fontDidot: "Didot",
     fontPalatino: "Palatino",
     pricingKicker: "Cena",
-    pricingTitle: "Wybierz wygodny wariant",
+    pricingTitle: "• wybierz wygodny wariant",
     pricePlan1Name: "Baza",
     pricePlan1Value: "1590 ₽",
     pricePlan1Text: "Po zatwierdzonej publikacji poprawki i dodatki — 800 ₽.",
@@ -409,7 +409,7 @@ const dictionaries = {
     inside6Title: "Pierwszy krok",
     inside6Text: "co zrobić dalej: napisać, umówić się, wybrać albo zadać pytanie",
     requestKicker: "Szybkie zapytanie",
-    requestTitle: "Złóż tekst wiadomości",
+    requestTitle: "• złóż tekst wiadomości",
     requestText: "Wybierz, dla czego potrzebna jest internetowa wizytówka, i wyślij mi gotową wiadomość.",
     choicePerson: "Dla kogo",
     messageHint: "Poniżej gotowy tekst. Można wysłać do bota Telegram albo skopiować.",
@@ -418,7 +418,7 @@ const dictionaries = {
     copyButton: "Skopiuj tekst",
     copiedButton: "Skopiowano",
     contactsKicker: "Kontakt",
-    contactsTitle: "Skontaktuj się ze mną",
+    contactsTitle: "• skontaktuj się ze mną",
     contactTelegram: "Telegram",
     contactSms: "SMS",
     contactCall: "Telefon",
@@ -521,7 +521,7 @@ choiceGroups.forEach((group) => {
   });
 });
 
-audienceCards.forEach((card) => {
+tileCards.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.add("is-tapped");
     window.setTimeout(() => card.classList.remove("is-tapped"), 900);
