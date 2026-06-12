@@ -860,6 +860,7 @@ main {
 .audience,
 .inside,
 .request,
+.pricing,
 .footer {
   padding: clamp(24px, 4vw, 46px) clamp(16px, 5vw, 0px);
 }
@@ -894,6 +895,40 @@ main {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 20px;
   padding: 18px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pricing-grid article {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 38%),
+    var(--surface);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.pricing-grid strong {
+  display: block;
+  font-family: var(--display-font);
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1;
+}
+
+.pricing-grid p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.36;
 }
 
 .style-panel p,
@@ -1724,6 +1759,7 @@ main {
   .audience,
   .inside,
   .request,
+  .pricing,
   .footer {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1817,6 +1853,26 @@ main {
   .style-panel,
   .request {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .pricing-grid article {
+    min-height: 132px;
+    padding: 10px 8px;
+  }
+
+  .pricing-grid strong {
+    font-size: clamp(16px, 4.4vw, 20px);
+  }
+
+  .pricing-grid p {
+    margin-top: 10px;
+    font-size: clamp(10px, 2.75vw, 12px);
+    line-height: 1.22;
   }
 
   .style-panel {
