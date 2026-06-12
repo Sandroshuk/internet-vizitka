@@ -770,6 +770,21 @@ h3 {
   font-weight: 760;
 }
 
+.style-teaser__cta {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid color-mix(in srgb, var(--teaser-accent, var(--accent)) 30%, var(--line));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--teaser-accent, var(--accent)) 14%, white);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 760;
+}
+
 .price-strip {
   width: min(620px, 100%);
   display: grid;
@@ -880,6 +895,14 @@ main {
   line-height: 1.14;
 }
 
+.section-note {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.7vw, 18px);
+  line-height: 1.48;
+}
+
 .style-panel,
 .request-box,
 .inside-list {
@@ -916,6 +939,13 @@ main {
     var(--surface);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(16px);
+}
+
+.pricing-grid h3 {
+  margin: 0 0 12px;
+  color: color-mix(in srgb, var(--accent) 62%, var(--ink));
+  font-size: 15px;
+  line-height: 1;
 }
 
 .pricing-grid strong {
@@ -1755,6 +1785,12 @@ main {
     line-height: 1.16;
   }
 
+  .section-note {
+    margin-top: 8px;
+    font-size: clamp(13px, 3.75vw, 16px);
+    line-height: 1.42;
+  }
+
   .style-lab,
   .audience,
   .inside,
@@ -1831,6 +1867,13 @@ main {
     font-size: 13px;
   }
 
+  .style-teaser__cta {
+    min-height: 26px;
+    margin-top: 8px;
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+
   .option-marquee,
   .hero-marquee {
     width: 100%;
@@ -1863,6 +1906,11 @@ main {
   .pricing-grid article {
     min-height: 132px;
     padding: 10px 8px;
+  }
+
+  .pricing-grid h3 {
+    margin-bottom: 8px;
+    font-size: 11px;
   }
 
   .pricing-grid strong {
