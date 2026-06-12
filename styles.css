@@ -285,10 +285,6 @@ button {
   fill: #d4a5a5;
 }
 
-.planet--d {
-  fill: #93c572;
-}
-
 .planet--e {
   fill: #ffdab9;
 }
@@ -303,10 +299,6 @@ button {
 
 .planet-orbit--c {
   animation: planetRunC 16s linear infinite;
-}
-
-.planet-orbit--d {
-  animation: planetRunD 5.8s linear infinite;
 }
 
 .planet-orbit--e {
@@ -1437,15 +1429,6 @@ main {
   }
   to {
     transform: rotate(618deg);
-  }
-}
-
-@keyframes planetRunD {
-  from {
-    transform: rotate(314deg);
-  }
-  to {
-    transform: rotate(-46deg);
   }
 }
 
