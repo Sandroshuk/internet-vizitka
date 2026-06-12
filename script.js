@@ -22,8 +22,8 @@ const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 let heroLeadTimer;
 let styleTeaserIndex = 0;
 const telegramUrl = "https://t.me/Vizi2026_bot";
-const maxBotUrl = "";
-const vkUrl = "";
+const maxBotUrl = "https://max.ru/join/-0DHObg3heKBuc7QZIStvfrPVQbuENBph3rYUyJzY74";
+const vkUrl = "https://vk.com/";
 
 const dictionaries = {
   ru: {
