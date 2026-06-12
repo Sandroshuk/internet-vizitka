@@ -426,28 +426,29 @@ main,
 
 .visual-toggle {
   position: absolute;
-  top: 8%;
-  right: 8%;
+  top: 2%;
+  right: 4%;
   z-index: 3;
-  min-height: 42px;
+  min-height: 32px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 6px;
+  padding: 5px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-strong);
   color: var(--ink);
-  font-weight: 780;
+  font-size: 12px;
+  font-weight: 640;
   cursor: pointer;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(12px);
 }
 
 .visual-toggle__icon {
-  width: 18px;
-  height: 12px;
-  border: 2px solid currentColor;
+  width: 15px;
+  height: 10px;
+  border: 1.5px solid currentColor;
   border-radius: 999px / 80%;
   position: relative;
 }
@@ -455,9 +456,9 @@ main,
 .visual-toggle__icon::before {
   content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
-  inset: 2px auto auto 5px;
+  width: 4px;
+  height: 4px;
+  inset: 2px auto auto 4.5px;
   border-radius: 50%;
   background: currentColor;
 }
@@ -465,10 +466,10 @@ main,
 body[data-visual="sphere"] .visual-toggle__icon::after {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 2px;
+  width: 19px;
+  height: 1.5px;
   top: 4px;
-  left: -4px;
+  left: -3.5px;
   border-radius: 2px;
   background: currentColor;
   transform: rotate(-28deg);
@@ -1678,12 +1679,14 @@ main {
   }
 
   .visual-toggle {
-    top: 2%;
-    left: 0;
+    top: -8px;
+    left: 2px;
     right: auto;
-    min-height: 34px;
-    padding: 6px 8px;
-    font-size: 11px;
+    min-height: 28px;
+    padding: 4px 7px;
+    gap: 5px;
+    font-size: 10px;
+    line-height: 1.05;
   }
 
   .visual-card__photo img,
