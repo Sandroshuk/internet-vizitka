@@ -214,68 +214,83 @@ button {
   overflow: visible;
 }
 
-.visual-card__sphere ellipse,
-.atom-center circle {
-  fill: none;
-  stroke: color-mix(in srgb, var(--accent) 86%, var(--ink));
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.visual-card__sphere ellipse {
-  stroke-dasharray: 0.2 11;
-}
-
-.atom-center circle {
-  stroke-dasharray: 0.2 8;
-}
-
-.orb,
-.orb-line,
-.atom,
-.atom-center {
+.orbit-logo,
+.logo-orbits,
+.planet-orbit {
   transform-box: fill-box;
   transform-origin: center;
 }
 
-.atom-center {
-  animation: atomCenterSpin 4.8s linear infinite;
+.orbit-logo {
+  animation: orbitLogoBreathe 6.8s ease-in-out infinite;
 }
 
-.orb--a {
-  transform: rotate(-18deg);
-  animation: orbitTurn 19s linear infinite;
+.logo-orbits {
+  animation: orbitTilt 13s ease-in-out infinite;
 }
 
-.orb--b {
-  transform: rotate(64deg);
-  animation: orbitTurnReverse 27s linear infinite;
+.orbit-path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 74%, var(--accent));
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
 }
 
-.orb-line {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  animation: lineTrace 6.4s ease-in-out infinite;
+.orbit-path--outer {
+  stroke-width: 2;
+  stroke-opacity: 0.2;
+  stroke-dasharray: 206 24 72 20;
+  animation: orbitDash 18s linear infinite;
 }
 
-.orb-line--two {
-  animation-delay: -3.2s;
+.orbit-path--middle {
+  stroke-width: 2.4;
+  stroke-opacity: 0.28;
+  stroke-dasharray: 138 18 48 22;
+  animation: orbitDashReverse 14s linear infinite;
 }
 
-.atom--one {
-  transform: rotate(0deg) scaleX(1);
-  animation: atomFlip 5.8s ease-in-out infinite;
+.orbit-path--inner {
+  stroke-width: 1.6;
+  stroke-opacity: 0.18;
+  stroke-dasharray: 74 16 118 20;
+  animation: orbitDash 10s linear infinite;
 }
 
-.atom--two {
-  rotate: 60deg;
-  animation: atomRingTwo 9s linear infinite;
+.logo-sun {
+  fill: color-mix(in srgb, #d8a85c 76%, var(--accent));
+  filter: drop-shadow(0 18px 28px color-mix(in srgb, var(--accent) 28%, transparent));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sunPulse 4.8s ease-in-out infinite;
 }
 
-.atom--three {
-  rotate: -60deg;
-  animation: atomRingThree 11s linear infinite;
+.planet {
+  filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--accent) 24%, transparent));
+}
+
+.planet--a {
+  fill: #62cbd5;
+}
+
+.planet--b {
+  fill: #b18ad8;
+}
+
+.planet--c {
+  fill: #d4a5a5;
+}
+
+.planet-orbit--a {
+  animation: planetRunA 8.5s linear infinite;
+}
+
+.planet-orbit--b {
+  animation: planetRunB 12s linear infinite;
+}
+
+.planet-orbit--c {
+  animation: planetRunC 16s linear infinite;
 }
 
 .nav,
@@ -468,7 +483,6 @@ body[data-visual="sphere"] .visual-toggle__icon::after {
 .visual-card__sphere svg {
   width: min(86%, 430px);
   filter: drop-shadow(0 20px 50px color-mix(in srgb, var(--accent) 38%, transparent));
-  animation: atomFloat 7s ease-in-out infinite;
 }
 
 body[data-visual="sphere"] .visual-card__photo {
@@ -1328,57 +1342,80 @@ main {
   }
 }
 
-@keyframes atomFloat {
+@keyframes orbitLogoBreathe {
   0%,
   100% {
-    translate: 0 0;
+    transform: translateY(0) scale(1) rotate(-3deg);
   }
   50% {
-    translate: 0 -8px;
+    transform: translateY(-8px) scale(1.035) rotate(3deg);
   }
 }
 
-@keyframes atomFlip {
+@keyframes orbitTilt {
   0%,
   100% {
-    transform: rotate(0deg) scaleX(1);
-    opacity: 1;
-  }
-  25%,
-  75% {
-    transform: rotate(0deg) scaleX(0.08);
-    opacity: 0.62;
+    transform: rotate(-8deg) scale(1);
   }
   50% {
-    transform: rotate(0deg) scaleX(1);
+    transform: rotate(10deg) scale(0.98);
+  }
+}
+
+@keyframes orbitDash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -360;
+  }
+}
+
+@keyframes orbitDashReverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 360;
+  }
+}
+
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.96;
+  }
+  50% {
+    transform: scale(1.08);
     opacity: 1;
   }
 }
 
-@keyframes atomRingTwo {
+@keyframes planetRunA {
   from {
-    rotate: 60deg;
+    transform: rotate(18deg);
   }
   to {
-    rotate: -300deg;
+    transform: rotate(378deg);
   }
 }
 
-@keyframes atomRingThree {
+@keyframes planetRunB {
   from {
-    rotate: -60deg;
+    transform: rotate(142deg);
   }
   to {
-    rotate: 300deg;
+    transform: rotate(-218deg);
   }
 }
 
-@keyframes atomCenterSpin {
+@keyframes planetRunC {
   from {
-    rotate: 0deg;
+    transform: rotate(258deg);
   }
   to {
-    rotate: 360deg;
+    transform: rotate(618deg);
   }
 }
 
