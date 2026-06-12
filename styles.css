@@ -763,19 +763,26 @@ h3 {
   animation: demoPress 640ms cubic-bezier(0.2, 1.35, 0.35, 1) both;
 }
 
+.style-teaser__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .style-teaser__name {
-  display: block;
+  min-width: 0;
   color: color-mix(in srgb, var(--teaser-accent, var(--accent)) 70%, var(--ink));
   font-size: 15px;
   font-weight: 760;
 }
 
 .style-teaser__cta {
+  flex: 0 0 auto;
   width: fit-content;
   display: inline-flex;
   align-items: center;
   min-height: 30px;
-  margin-top: 10px;
   padding: 6px 12px;
   border: 1px solid color-mix(in srgb, var(--teaser-accent, var(--accent)) 30%, var(--line));
   border-radius: 999px;
@@ -1869,7 +1876,6 @@ main {
 
   .style-teaser__cta {
     min-height: 26px;
-    margin-top: 8px;
     padding: 5px 9px;
     font-size: 11px;
   }
