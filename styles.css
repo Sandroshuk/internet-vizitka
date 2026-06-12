@@ -895,6 +895,40 @@ main {
   margin-bottom: 16px;
 }
 
+.audience-card {
+  position: relative;
+  margin-bottom: 0;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 12% 14%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 15%, var(--surface-strong)), var(--surface));
+  box-shadow: var(--glow), 0 18px 46px rgba(0, 0, 0, 0.045);
+  overflow: hidden;
+}
+
+.audience-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -46% 44%;
+  height: 82%;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  filter: blur(34px);
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.audience-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.audience-card .section-note {
+  max-width: 860px;
+}
+
 .section-head h2,
 .footer h2 {
   max-width: 720px;
