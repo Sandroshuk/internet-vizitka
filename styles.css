@@ -281,6 +281,14 @@ button {
   fill: #d4a5a5;
 }
 
+.planet--d {
+  fill: #93c572;
+}
+
+.planet--e {
+  fill: #ffdab9;
+}
+
 .planet-orbit--a {
   animation: planetRunA 8.5s linear infinite;
 }
@@ -291,6 +299,14 @@ button {
 
 .planet-orbit--c {
   animation: planetRunC 16s linear infinite;
+}
+
+.planet-orbit--d {
+  animation: planetRunD 5.8s linear infinite;
+}
+
+.planet-orbit--e {
+  animation: planetRunE 20s linear infinite;
 }
 
 .nav,
@@ -1416,6 +1432,24 @@ main {
   }
   to {
     transform: rotate(618deg);
+  }
+}
+
+@keyframes planetRunD {
+  from {
+    transform: rotate(314deg);
+  }
+  to {
+    transform: rotate(-46deg);
+  }
+}
+
+@keyframes planetRunE {
+  from {
+    transform: rotate(82deg);
+  }
+  to {
+    transform: rotate(442deg);
   }
 }
 
