@@ -553,6 +553,7 @@ langButtons.forEach((button) => {
 function setLanguage(lang) {
   state.lang = lang;
   document.documentElement.lang = lang;
+  document.body.dataset.lang = lang;
 
   langButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);

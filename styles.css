@@ -1411,13 +1411,14 @@ main {
 .footer__actions {
   width: min(620px, 100%);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: stretch;
   gap: 10px;
   margin-top: 0;
 }
 
 .contact-tile {
+  grid-column: span 2;
   min-width: 0;
   min-height: 78px;
   display: flex;
@@ -1455,6 +1456,14 @@ main {
 
 .contact-tile--primary {
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 24%, white), var(--surface));
+}
+
+.contact-tile--wide {
+  grid-column: span 3;
+}
+
+body:not([data-lang="ru"]) .contact-tile {
+  grid-column: 1 / -1;
 }
 
 .footer__legal {
@@ -2206,7 +2215,7 @@ main {
 
   .footer__actions {
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 7px;
   }
 
