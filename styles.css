@@ -1742,8 +1742,8 @@ main {
   }
 
   .hero__content {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 14px;
+    padding-bottom: 10px;
   }
 
   .hero__layout {
@@ -1826,7 +1826,7 @@ main {
   }
 
   .section-note {
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: clamp(13px, 3.75vw, 16px);
     line-height: 1.42;
   }
@@ -1837,16 +1837,16 @@ main {
   .request,
   .pricing,
   .footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .request {
-    padding-top: 12px;
+    padding-top: 8px;
   }
 
   .section-head {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   h3 {
@@ -1856,7 +1856,7 @@ main {
   .hero__lead {
     grid-column: 1 / -1;
     margin-top: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     padding: 10px;
   }
 
@@ -1878,7 +1878,7 @@ main {
 
   .style-teaser {
     grid-column: 1 / -1;
-    margin: -2px 0 10px;
+    margin: 0 0 6px;
     padding: 10px;
   }
 
@@ -1937,6 +1937,11 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .style-panel,
+  .request-box {
+    padding: 12px;
+  }
+
   .pricing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
@@ -1966,10 +1971,6 @@ main {
     line-height: 1.22;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-  }
-
-  .style-panel {
-    padding: 20px;
   }
 
   .swatches {
@@ -2117,6 +2118,7 @@ main {
   .choice-group {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 7px;
+    padding-bottom: 10px;
   }
 
   .choice {
@@ -2126,9 +2128,24 @@ main {
     line-height: 1.08;
   }
 
+  .message-card {
+    margin-top: 10px;
+    padding: 14px;
+  }
+
+  .message-card p {
+    margin-top: 12px;
+    font-size: clamp(17px, 5vw, 22px);
+    line-height: 1.28;
+  }
+
+  .message-card__actions {
+    margin-top: 12px;
+  }
+
   .footer {
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
   }
 
   .footer__actions .button,
