@@ -28,7 +28,7 @@ const examples = {
     lead: "Стрижки, уход и мягкие окрашивания. Здесь собраны прайс, фото до/после и кнопка записи.",
     accent: "#b18ad8",
     bg: "#f8f3ff",
-    photo: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80",
+    photo: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80",
     facts: ["консультация перед окрашиванием", "работа с блондом", "подбор ухода домой"],
     prices: [
       ["Женская стрижка", "120 zł"],
