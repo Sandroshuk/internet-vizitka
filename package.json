@@ -1,0 +1,10 @@
+{
+  "name": "internet-vizitka",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bot": "node bot/bot.js",
+    "check": "node --check script.js && node --check bot/bot.js && node --check examples/app.js"
+  }
+}
