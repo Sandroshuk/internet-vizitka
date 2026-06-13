@@ -369,8 +369,20 @@ blockquote {
     linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, white), var(--surface-strong));
 }
 
+.contact-card--final {
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 34%),
+    var(--surface-strong);
+}
+
 .contact-card p {
   margin-bottom: 12px;
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .gallery {

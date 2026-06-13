@@ -72,7 +72,7 @@ const examples = {
     lead: "Диагностика и занятия для детей, а родителям — спокойный понятный план без хаоса в переписке.",
     accent: "#87ceeb",
     bg: "#fff0f5",
-    photo: "https://images.unsplash.com/photo-1605711285791-0219e80e43a3?auto=format&fit=crop&w=900&q=80",
+    photo: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80",
     facts: ["первая консультация 30 минут", "материалы после занятия", "упражнения домой"],
     prices: [
       ["Консультация", "1200 ₽"],
@@ -80,9 +80,9 @@ const examples = {
       ["Пакет 4 занятия", "6800 ₽"],
     ],
     works: [
-      ["Диагностика", "первая встреча и план", "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=700&q=80"],
-      ["Звуки", "упражнения под ребенка", "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"],
-      ["Родителям", "что делать дома", "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=700&q=80"],
+      ["Диагностика", "первая встреча и план", "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=700&q=80"],
+      ["Звуки", "упражнения под ребенка", "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=700&q=80"],
+      ["Родителям", "что делать дома", "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=700&q=80"],
     ],
     story: "Занятия проходят в спокойном ритме. После первой встречи семья получает понятный план: над чем работаем и как заниматься дома.",
     review: "“Через два месяца дочка стала говорить заметно четче, а домашние упражнения перестали быть борьбой.”",
@@ -303,14 +303,12 @@ function renderExample() {
       <blockquote>${item.review}</blockquote>
     </section>
 
-    <section class="section contact-card" id="booking">
-      <p>Хотите уточнить детали? В настоящей визитке эта кнопка ведет сразу к человеку, который предлагает услугу.</p>
-      <a class="button" href="https://t.me/share/url?url=&text=${bookingText}">Написать</a>
-    </section>
-
-    <section class="section contact-card contact-card--order">
-      <p>Хотите такую же интернет-визитку?</p>
-      <a class="button" href="https://t.me/Vizi2026_bot?start=card_request">Хочу такую визитку</a>
+    <section class="section contact-card contact-card--final" id="booking">
+      <p>В настоящей визитке первая кнопка ведет к мастеру. Если хотите такую же страницу для своего дела, отправьте заявку.</p>
+      <div class="contact-actions">
+        <a class="button" href="https://t.me/share/url?url=&text=${bookingText}">Написать</a>
+        <a class="button button--light" href="https://t.me/Vizi2026_bot?start=card_request">Хочу такую визитку</a>
+      </div>
     </section>
   `;
 }
