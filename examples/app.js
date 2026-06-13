@@ -72,7 +72,7 @@ const examples = {
     lead: "Диагностика и занятия для детей, а родителям — спокойный понятный план без хаоса в переписке.",
     accent: "#87ceeb",
     bg: "#fff0f5",
-    photo: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80",
+    photo: "https://images.unsplash.com/photo-1605711285791-0219e80e43a3?auto=format&fit=crop&w=900&q=80",
     facts: ["первая консультация 30 минут", "материалы после занятия", "упражнения домой"],
     prices: [
       ["Консультация", "1200 ₽"],
@@ -81,8 +81,8 @@ const examples = {
     ],
     works: [
       ["Диагностика", "первая встреча и план", "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=700&q=80"],
-      ["Звуки", "упражнения под ребенка", "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=700&q=80"],
-      ["Родителям", "что делать дома", "https://images.unsplash.com/photo-1605711285791-0219e80e43a3?auto=format&fit=crop&w=700&q=80"],
+      ["Звуки", "упражнения под ребенка", "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"],
+      ["Родителям", "что делать дома", "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=700&q=80"],
     ],
     story: "Занятия проходят в спокойном ритме. После первой встречи семья получает понятный план: над чем работаем и как заниматься дома.",
     review: "“Через два месяца дочка стала говорить заметно четче, а домашние упражнения перестали быть борьбой.”",
