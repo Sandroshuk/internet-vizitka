@@ -36,7 +36,7 @@ const examples = [
   ["Грузоперевозки", "transport"],
   ["Мастер по ремонту", "repair"],
   ["Орбита", "network"],
-  ["Консультации", "consulting"],
+  ["Юрист Татьяна", "consulting"],
   ["Другое дело", "other"],
 ];
 
