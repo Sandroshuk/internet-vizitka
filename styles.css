@@ -1032,7 +1032,7 @@ main {
 .pricing-grid strong {
   display: block;
   font-family: var(--display-font);
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(19px, 2.45vw, 28px);
   line-height: 1;
 }
 
@@ -2059,13 +2059,13 @@ body:not([data-lang="ru"]) .contact-tile {
   }
 
   .pricing-grid strong {
-    font-size: clamp(16px, 4.4vw, 20px);
+    font-size: clamp(13px, 3.65vw, 17px);
   }
 
   .pricing-grid p {
     display: -webkit-box;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 7px;
     font-size: clamp(10px, 2.75vw, 12px);
     line-height: 1.22;
     -webkit-line-clamp: 4;
