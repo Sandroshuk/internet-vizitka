@@ -364,6 +364,11 @@ blockquote {
   border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
 }
 
+.contact-card--order {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, white), var(--surface-strong));
+}
+
 .contact-card p {
   margin-bottom: 12px;
 }

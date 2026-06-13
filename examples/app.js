@@ -3,7 +3,7 @@ const examples = {
     name: "Анна Морозова",
     title: "Маникюр",
     location: "Симферополь · центр",
-    lead: "Я делаю аккуратный маникюр, показываю фото работ и принимаю записи без лишней переписки.",
+    lead: "Делаю аккуратный маникюр, показываю фото работ. Принимаю по записи без лишней переписки.",
     accent: "#d4a5a5",
     bg: "#fff0f5",
     photo: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
@@ -18,7 +18,7 @@ const examples = {
       ["Тонкий френч", "для свадьбы и фотосессии", "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=80"],
       ["Красный лак", "классика на каждый день", "https://images.unsplash.com/photo-1604654894611-6973b376cbde?auto=format&fit=crop&w=700&q=80"],
     ],
-    story: "Я принимаю дома в отдельном кабинете. Перед записью можно отправить мне фото желаемого дизайна, а я пришлю ближайшие окна и точную стоимость.",
+    story: "Принимаю в отдельном кабинете. Перед записью можно отправить фото желаемого дизайна, а я пришлю ближайшие окна и точную стоимость.",
     review: "“Очень спокойно, чисто и без спешки. Ногти выглядят дорого даже через две недели.”",
   },
   hair: {
@@ -249,6 +249,7 @@ function renderExample() {
   if (!root) return;
 
   const item = examples[getExampleId()] || examples.manicure;
+  const bookingText = encodeURIComponent(`Здравствуйте, ${item.name}! Хочу записаться: ${item.title}.`);
   document.documentElement.style.setProperty("--accent", item.accent);
   document.documentElement.style.setProperty("--bg", item.bg);
   document.title = `${item.name} | ${item.title}`;
@@ -272,7 +273,7 @@ function renderExample() {
         <p class="lead">${item.lead}</p>
         <div class="chips">${renderChips(item.facts)}</div>
         <div class="actions">
-          <a class="button" href="https://t.me/Vizi2026_bot">Записаться</a>
+          <a class="button" href="#booking">Записаться</a>
           <a class="button button--light" href="../../">Заказать такую</a>
         </div>
       </div>
@@ -293,7 +294,6 @@ function renderExample() {
     <section class="section">
       <div class="section-title">
         <p class="kicker">Работы и формат</p>
-        <h2>Сразу видно, с чем можно обратиться</h2>
       </div>
       <div class="tiles works-grid">${renderWorks(item.works)}</div>
     </section>
@@ -303,9 +303,14 @@ function renderExample() {
       <blockquote>${item.review}</blockquote>
     </section>
 
-    <section class="section contact-card">
-      <p>Если хотите такую же страницу под свое дело, напишите мне. Ссылку можно отправлять клиентам, знакомым или сохранить на главный экран телефона.</p>
-      <a class="button" href="../../#request">Хочу такую визитку</a>
+    <section class="section contact-card" id="booking">
+      <p>Хотите записаться или уточнить детали? В настоящей визитке эта кнопка ведет сразу к мастеру.</p>
+      <a class="button" href="https://t.me/share/url?url=&text=${bookingText}">Написать мастеру</a>
+    </section>
+
+    <section class="section contact-card contact-card--order">
+      <p>Хотите такую же интернет-визитку?</p>
+      <a class="button" href="https://t.me/Vizi2026_bot?start=card_request">Хочу такую визитку</a>
     </section>
   `;
 }
